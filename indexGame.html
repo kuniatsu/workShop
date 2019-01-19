@@ -52,8 +52,15 @@
 
     .copy{
         text-align: center;
-        background-image: blue;
+        background-color: #77e;
         border:groove 3px #000;
+    }
+
+    .select{
+      border: dashed 2px #000;
+    }
+    .ans{
+      border: double 5px #aaa;
     }
   </style>
   <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
@@ -236,7 +243,7 @@
   <div class="obj">
       画面の情報を取得<br />      
     <pre class="prettyprint" id="src33">
-        &lt;html&gt; 
+      &lt;html&gt; 
         &lt;body&gt;
           &lt;p id='num'&gt;ここに説明文&lt;/p&gt;
           &lt;input id='tt' value='テキストボックスの中'&gt;
@@ -255,17 +262,17 @@
       テキストボックス(tt)のvalue(「テキストボックスの中」)をconsole.dirで表示してみよう<br />      
     <pre class="prettyprint" id="src34">
       &lt;html&gt; 
-      &lt;body&gt;
-        &lt;p id='num'&gt;ここに説明文&lt;/p&gt;
-        &lt;input id='tt' value='テキストボックスの中'&gt;
-        &lt;button id='bt'&gt;ボタンの中&lt;/button&gt;    
-      &lt;/body&gt;
-      &lt;script&gt;
-        var a = document.querySelector('#tt');
-        console.dir(a);
-        console.dir(a.value);     
-        /*  ※a.valueはaの中のvalueっということ */ 
-      &lt;/script&gt; 
+        &lt;body&gt;
+          &lt;p id='num'&gt;ここに説明文&lt;/p&gt;
+          &lt;input id='tt' value='テキストボックスの中'&gt;
+          &lt;button id='bt'&gt;ボタンの中&lt;/button&gt;    
+        &lt;/body&gt;
+        &lt;script&gt;
+          var a = document.querySelector('#tt');
+          console.dir(a);
+          console.dir(a.value);     
+          /*  ※a.valueはaの中のvalueっということ */ 
+        &lt;/script&gt; 
       &lt;/html&gt; 
     </pre>
     <p class="copy" id="copy34">選択</p>
@@ -281,8 +288,8 @@
           &lt;button id="bt"&gt;押せ！&lt;/button&gt;    
         &lt;/body&gt;
         &lt;script&gt;
-        [処理]
-        console.dir(b.innerText);
+          [処理]
+          console.dir(b.innerText);
         &lt;/script&gt; 
       &lt;/html&gt; 
     </pre>
@@ -294,18 +301,18 @@
     <pre class="prettyprint" id="src36">
       &lt;html&gt; 
         &lt;body&gt;
-        &lt;input type="text" id="tb"&gt;
-        &lt;button id="bt"&gt;押せ！&lt;/button&gt; 
+          &lt;input type="text" id="tb"&gt;
+          &lt;button id="bt"&gt;押せ！&lt;/button&gt; 
         &lt;/body&gt;
         &lt;script&gt;
-        var bt = document.querySelector('#bt');
-        console.dir(bt);
-        bt.addEventListener('click',say);
-      
-        function say(){
-          console.dir('クリックされた');
-        }        
-        /* ※関数を割り当てるのはaddEventListener */
+          var bt = document.querySelector('#bt');
+          console.dir(bt);
+          bt.addEventListener('click',say);
+        
+          function say(){
+            console.dir('クリックされた');
+          }        
+          /* ※関数を割り当てるのはaddEventListener */
         &lt;/script&gt; 
       &lt;/html&gt; 
     </pre>
@@ -316,17 +323,17 @@
     説明文を変えてみよう<br />      
     <pre class="prettyprint" id="src37">
       &lt;html&gt; 
-      &lt;body&gt;
-        &lt;p id='num'&gt;ここに説明文&lt;/p&gt;
-        &lt;input id='tt' value='テキストボックスの中'&gt;
-        &lt;button id='bt'&gt;ボタンの中&lt;/button&gt;    
-      &lt;/body&gt;
+        &lt;body&gt;
+          &lt;p id='num'&gt;ここに説明文&lt;/p&gt;
+          &lt;input id='tt' value='テキストボックスの中'&gt;
+          &lt;button id='bt'&gt;ボタンの中&lt;/button&gt;    
+        &lt;/body&gt;
         &lt;script&gt;
-        var num = document.querySelector('#num');
-        console.dir(num);
-        num.innerText = "0123456789";
-      
-        /* ※num.innerTextに値を代入することもできる*/
+          var num = document.querySelector('#num');
+          console.dir(num);
+          num.innerText = "0123456789";
+        
+          /* ※num.innerTextに値を代入することもできる*/
         &lt;/script&gt; 
       &lt;/html&gt; 
     </pre>
@@ -337,20 +344,20 @@
       【問題】ボタンを押したら説明文が変わるように変更<br />      
     <pre class="prettyprint" id="src38">
       &lt;html&gt;
-      &lt;body&gt;
-        &lt;p id='num'&gt;ここに説明文&lt;/p&gt;
-        &lt;input id='tt' value='テキストボックスの中'&gt;
-        &lt;button id='bt'&gt;ボタンの中&lt;/button&gt;    
-      &lt;/body&gt;
-      &lt;script&gt;
-        var bt = document.querySelector('#bt');
-        var num = document.querySelector('#num');
-        bt.addEventListener('click',say);
-        function say(){
-          console.dir('クリックされた');
-        }        
-        /* ※説明文が変わるタイミングを変えるだけ、１行追加して完成させよう*/
-      &lt;/script&gt; 
+        &lt;body&gt;
+          &lt;p id='num'&gt;ここに説明文&lt;/p&gt;
+          &lt;input id='tt' value='テキストボックスの中'&gt;
+          &lt;button id='bt'&gt;ボタンの中&lt;/button&gt;    
+        &lt;/body&gt;
+        &lt;script&gt;
+          var bt = document.querySelector('#bt');
+          var num = document.querySelector('#num');
+          bt.addEventListener('click',say);
+          function say(){
+            console.dir('クリックされた');
+          }        
+          /* ※説明文が変わるタイミングを変えるだけ、１行追加して完成させよう*/
+        &lt;/script&gt; 
       &lt;/html&gt; 
     </pre>
     <p class="copy" id="copy38">選択</p>
@@ -366,15 +373,15 @@
           &lt;button id='bt'&gt;ボタンの中&lt;/button&gt;    
         &lt;/body&gt;
         &lt;script&gt;
-        var bt = document.querySelector('#bt');
-        var num = document.querySelector('#num');
-        bt.addEventListener('click',say);
-      
-        function say(){
-          console.dir('クリックされた');
-          var ransuu = Math.random();    /* 乱数作成*/
-          num.innerText = ransuu;
-        }            
+          var bt = document.querySelector('#bt');
+          var num = document.querySelector('#num');
+          bt.addEventListener('click',say);
+        
+          function say(){
+            console.dir('クリックされた');
+            var ransuu = Math.random();    /* 乱数作成*/
+            num.innerText = ransuu;
+          }            
         &lt;/script&gt; 
       &lt;/html&gt; 
     </pre>
@@ -416,25 +423,25 @@
       <pre class="prettyprint" id="src41">
         &lt;html&gt; 
         &lt;body&gt;
-        &lt;p id='num'&gt;ここに説明文&lt;/p&gt;
-        &lt;input id='tt' value='テキストボックスの中'&gt;
-        &lt;button id='bt'&gt;ボタンの中&lt;/button&gt;    
+          &lt;p id='num'&gt;ここに説明文&lt;/p&gt;
+          &lt;input id='tt' value='テキストボックスの中'&gt;
+          &lt;button id='bt'&gt;ボタンの中&lt;/button&gt;    
         &lt;/body&gt;
           &lt;script&gt;
-          var keta = 10;
-          var bt = document.querySelector('#bt');
-          var num = document.querySelector('#num');
-          bt.addEventListener('click',say);
-        
-          function say(){
-            console.dir('クリックされた');
-            /*ここに１行追加*/
-            var ransuu = Math.random();           /* 乱数作成*/
-            var ransuu2 = ransuu*keta;              /*n倍する*/
-            var ransuu3 = Math.floor(ransuu2); /* 小数点以下切り捨て*/
-            num.innerText = ransuu3;
-          }                
-          /*2桁が３桁になるにはどの数字を、いつ変えたらいいか考えてみよう*/        
+            var keta = 10;
+            var bt = document.querySelector('#bt');
+            var num = document.querySelector('#num');
+            bt.addEventListener('click',say);
+          
+            function say(){
+              console.dir('クリックされた');
+              /*ここに１行追加*/
+              var ransuu = Math.random();           /* 乱数作成*/
+              var ransuu2 = ransuu*keta;              /*n倍する*/
+              var ransuu3 = Math.floor(ransuu2); /* 小数点以下切り捨て*/
+              num.innerText = ransuu3;
+            }                
+            /*2桁が３桁になるにはどの数字を、いつ変えたらいいか考えてみよう*/        
           &lt;/script&gt; 
         &lt;/html&gt; 
       </pre>
@@ -445,11 +452,11 @@
         乱数作成を関数にしてみよう<br />      
         <pre class="prettyprint" id="src42">
           &lt;html&gt; 
-          &lt;body&gt;
-          &lt;p id='num'&gt;ここに説明文&lt;/p&gt;
-          &lt;input id='tt' value='テキストボックスの中'&gt;
-          &lt;button id='bt'&gt;ボタンの中&lt;/button&gt;    
-        &lt;/body&gt;
+            &lt;body&gt;
+              &lt;p id='num'&gt;ここに説明文&lt;/p&gt;
+              &lt;input id='tt' value='テキストボックスの中'&gt;
+              &lt;button id='bt'&gt;ボタンの中&lt;/button&gt;    
+            &lt;/body&gt;
             &lt;script&gt;
             var keta = 10;
             var bt = document.querySelector('#bt');
@@ -480,35 +487,35 @@
         テキストボックスと答え合わせをする。<br />      
         <pre class="prettyprint" id="src43">
           &lt;html&gt; 
-          &lt;body&gt;
-          &lt;p id='num'&gt;ここに説明文&lt;/p&gt;
-          &lt;input id='tt' value='テキストボックスの中'&gt;
-          &lt;button id='bt'&gt;ボタンの中&lt;/button&gt;    
-        &lt;/body&gt;
+            &lt;body&gt;
+              &lt;p id='num'&gt;ここに説明文&lt;/p&gt;
+              &lt;input id='tt' value='テキストボックスの中'&gt;
+              &lt;button id='bt'&gt;ボタンの中&lt;/button&gt;    
+            &lt;/body&gt;
             &lt;script&gt;
-            var keta = 10;
-            var bt = document.querySelector('#bt');
-            var tt = document.querySelector('#tt');
-            var num = document.querySelector('#num');
-            bt.addEventListener('click',say);
-          
-            function say(){
-              console.log(tt.value);
-              console.log(num.innerText);
-              if(tt.value==num.innerText){
-                console.dir('正解');
+              var keta = 10;
+              var bt = document.querySelector('#bt');
+              var tt = document.querySelector('#tt');
+              var num = document.querySelector('#num');
+              bt.addEventListener('click',say);
+            
+              function say(){
+                console.log(tt.value);
+                console.log(num.innerText);
+                if(tt.value==num.innerText){
+                  console.dir('正解');
+                }
+                console.dir('次の問題!');
+                keta = keta*10;
+                num.innerText = random(keta);
               }
-              console.dir('次の問題!');
-              keta = keta*10;
-              num.innerText = random(keta);
-            }
-          
-            function random(ketasuu){
-              var ransuu = Math.random(); /* 乱数作成*/
-              var ransuu2 = ransuu*ketasuu; /*100倍する*/
-              var ransuu3 = Math.floor(ransuu2); /* 小数点以下切り捨て*/
-              return ransuu3;
-            }
+            
+              function random(ketasuu){
+                var ransuu = Math.random(); /* 乱数作成*/
+                var ransuu2 = ransuu*ketasuu; /*100倍する*/
+                var ransuu3 = Math.floor(ransuu2); /* 小数点以下切り捨て*/
+                return ransuu3;
+              }
           
             &lt;/script&gt; 
           &lt;/html&gt; 
@@ -521,11 +528,11 @@
         【問題4】正解しないと桁数が増えないようにする<br />      
         <pre class="prettyprint" id="src44">
           &lt;html&gt; 
-          &lt;body&gt;
-          &lt;p id='num'&gt;ここに説明文&lt;/p&gt;
-          &lt;input id='tt' value='テキストボックスの中'&gt;
-          &lt;button id='bt'&gt;ボタンの中&lt;/button&gt;    
-        &lt;/body&gt;
+            &lt;body&gt;
+              &lt;p id='num'&gt;ここに説明文&lt;/p&gt;
+              &lt;input id='tt' value='テキストボックスの中'&gt;
+              &lt;button id='bt'&gt;ボタンの中&lt;/button&gt;    
+            &lt;/body&gt;
             &lt;script&gt;
             var keta = 10;
             var bt = document.querySelector('#bt');
@@ -538,6 +545,7 @@
                 console.dir('正解');
               }
               console.dir('次の問題!');
+              keta = keta*10;
               num.innerText = random(keta);
             }
           
@@ -558,11 +566,11 @@
           テキストボックスを空にする（毎回消すのめんどくさいから）&ボタンの名前もかえる(ずっとスタートは変)<br />      
         <pre class="prettyprint" id="src45">
           &lt;html&gt; 
-          &lt;body&gt;
-          &lt;p id='num'&gt;ここに説明文&lt;/p&gt;
-          &lt;input id='tt' value='テキストボックスの中'&gt;
-          &lt;button id='bt'&gt;ボタンの中&lt;/button&gt;    
-        &lt;/body&gt;
+            &lt;body&gt;
+              &lt;p id='num'&gt;ここに説明文&lt;/p&gt;
+              &lt;input id='tt' value='テキストボックスの中'&gt;
+              &lt;button id='bt'&gt;ボタンの中&lt;/button&gt;    
+            &lt;/body&gt;
             &lt;script&gt;
             var keta = 10;
             var bt = document.querySelector('#bt');
@@ -598,11 +606,11 @@
         入力するときは数字を消す（写すだけから脱却！!でも正解できなくなってしまう！）<br />      
         <pre class="prettyprint" id="src46">
           &lt;html&gt; 
-          &lt;body&gt;
-          &lt;p id='num'&gt;ここに説明文&lt;/p&gt;
-          &lt;input id='tt' value='テキストボックスの中'&gt;
-          &lt;button id='bt'&gt;ボタンの中&lt;/button&gt;    
-        &lt;/body&gt;
+            &lt;body&gt;
+              &lt;p id='num'&gt;ここに説明文&lt;/p&gt;
+              &lt;input id='tt' value='テキストボックスの中'&gt;
+              &lt;button id='bt'&gt;ボタンの中&lt;/button&gt;    
+            &lt;/body&gt;
             &lt;script&gt;
             var keta = 10;
             var bt = document.querySelector('#bt');
@@ -641,70 +649,71 @@
       </div>
 
       <div class="obj">
-          【問題5】正解ができるように変更しよう<br />      
-          <pre class="prettyprint" id="src46">
-            &lt;html&gt; 
+        【問題5】正解ができるように変更しよう<br />      
+        <pre class="prettyprint" id="src47">
+          &lt;html&gt; 
             &lt;body&gt;
-            &lt;p id='num'&gt;ここに説明文&lt;/p&gt;
-            &lt;input id='tt' value='テキストボックスの中'&gt;
-            &lt;button id='bt'&gt;ボタンの中&lt;/button&gt;    
-          &lt;/body&gt;
-              &lt;script&gt;
-              var keta = 10;
-              var bt = document.querySelector('#bt');
-              var tt = document.querySelector('#tt');
-              var num = document.querySelector('#num');
-              var kotae = "";                              /*この行を追加*/
-            
-              bt.addEventListener('click',say);
-              tt.addEventListener('click',numkesu);
-            
-              function say(){
-                if(tt.value==num.innerText){     /*この行を変更*/
-                  console.dir('正解');
-                  keta = keta*10;
-                }
-                console.dir('次の問題!');
-                num.innerText = random(keta);    /*この行を変更*/
-                /*ここに１行追加*/
-                tt.value = "";
-                bt.innerText = "決定!";
+              &lt;p id='num'&gt;ここに説明文&lt;/p&gt;
+              &lt;input id='tt' value='テキストボックスの中'&gt;
+              &lt;button id='bt'&gt;ボタンの中&lt;/button&gt;    
+            &lt;/body&gt;
+            &lt;script&gt;
+            var keta = 10;
+            var bt = document.querySelector('#bt');
+            var tt = document.querySelector('#tt');
+            var num = document.querySelector('#num');
+            var kotae = "";                              /*この行を追加*/
+          
+            bt.addEventListener('click',say);
+            tt.addEventListener('click',numkesu);
+          
+            function say(){
+              if(tt.value==num.innerText){     /*この行を変更*/
+                console.dir('正解');
+                keta = keta*10;
               }
-            
-              function random(ketasuu){
-                var ransuu = Math.random(); /* 乱数作成*/
-                var ransuu2 = ransuu*ketasuu; /*100倍する*/
-                var ransuu3 = Math.floor(ransuu2); /* 小数点以下切り捨て*/
-                return ransuu3;
-              }
-            
-              function numkesu(){
-                console.dir("消えまーす!");
-                num.innerText = "";
-              }              
-              /*kotaeがなんのためにあるか考えてみよう*/  
-              &lt;/script&gt; 
-            &lt;/html&gt; 
-          </pre>
-          <p class="copy" id="copy46">選択</p>
-        </div>
+              console.dir('次の問題!');
+              num.innerText = random(keta);    /*この行を変更*/
+              /*ここに１行追加*/
+              tt.value = "";
+              bt.innerText = "決定!";
+            }
+          
+            function random(ketasuu){
+              var ransuu = Math.random(); /* 乱数作成*/
+              var ransuu2 = ransuu*ketasuu; /*100倍する*/
+              var ransuu3 = Math.floor(ransuu2); /* 小数点以下切り捨て*/
+              return ransuu3;
+            }
+          
+            function numkesu(){
+              console.dir("消えまーす!");
+              num.innerText = "";
+            }              
+            /*kotaeがなんのためにあるか考えてみよう*/  
+            &lt;/script&gt; 
+          &lt;/html&gt; 
+        </pre>
+        <p class="copy" id="copy47">選択</p>
+      </div>
+
   </body>
   <script>
-    function select(num){
+    function select(obj){
         var s = window.getSelection();
         s.empty();
         var range = document.createRange();
-        range.selectNode(document.querySelector("#src"+num));
+        range.selectNode(obj.querySelector('pre'));
         s.addRange(range);    
     }
 
     (()=>{
-      let objArray = document.querySelectorAll('.obj');
+        let objArray = document.querySelectorAll('.obj');
         for(let obj of objArray){
           let copy = obj.querySelector('p');
           copy.addEventListener('click',()=>{
                 console.log(copy.id);
-                select(copy.id.replace('copy',''));
+                select(obj);
             });
         }
     })();
