@@ -52,8 +52,15 @@
 
     .copy{
         text-align: center;
-        background-image: blue;
+        background-color: #77e;
         border:groove 3px #000;
+    }
+
+    .select{
+      border: dashed 2px #000;
+    }
+    .ans{
+      border: double 5px #aaa;
     }
   </style>
 
@@ -113,7 +120,7 @@
   </div>
 
   <div class="obj">
-      //〜処理〜と書いてあるところに下にあるコードから必要なものを選んで完成させてください。<br />
+      【問題】//〜処理〜と書いてあるところに下にあるコードから必要なものを選んで完成させてください。<br />
       hideo<br />
       masao<br />
       と表示できれば完成です。(c01.html)<br />      
@@ -129,6 +136,7 @@
     &lt;/html&gt; 
     </pre>
     <p class="copy" id="copy3">選択</p>
+    <div class="select">
     ここから選ぶ<br />
     var text1 = text1;<br />
     var text1 = text2;<br />
@@ -141,14 +149,17 @@
     var text3 = text3;<br />
     var text1 = "masao";<br />
     var text2 = "hideo";<br />
+    </div>
   </div>
 
   <div class="obj">
-      [処理]と書いてあるところにコード書いて完成させてください。<br />
-      3<br />
-      54<br />
-      41<br />
-      12<br />
+      【問題】[処理]と書いてあるところに４つの変数を使いコード書いて完成させてください。<br />
+      <div class="select">
+        3<br />
+        54<br />
+        41<br />
+        12<br />
+      </div>
       と表示できれば完成です。(c02.html)<br />      
     <pre class="prettyprint" id="src4">
     &lt;html&gt; 
@@ -183,10 +194,9 @@
     &lt;/html&gt; 
     </pre>
     <p class="copy" id="copy5">選択</p>
-    0~20を表示してみよう!<br />
   </div>
   <div class="obj">
-    繰り返しの条件を書いてみましょう。(c03.html)
+    【問題】繰り返しの条件を書いてみましょう。(c03.html)
     <pre class="prettyprint" id="src6">
     &lt;html&gt; 
       &lt;script&gt; 
@@ -199,30 +209,53 @@
     &lt;/html&gt; 
     </pre>
     <p class="copy" id="copy6">選択</p>
-    1~10を表示してみよう！<br />
-    2・4・6・8を表示してみよう!<br />
-    20~1を表示してみよう！<br />
+    <div class="select">
+    ①0~20を表示してみよう!<br />
+    ②1~10を表示してみよう！<br />
+    ③2・4・6・8を表示してみよう!<br />
+    ④20~1を表示してみよう！<br />
+    </div>
   </div>
+
   <div class="obj">
-    繰り返しの条件を書いてみましょう。(c04.html)
+    【問題】下にあるコードを使ってhideoとmasaoを交互に表示してみましょう(c04.html)
     <pre class="prettyprint" id="src7">
     &lt;html&gt; 
       &lt;script&gt; 
       var i = 0;
+      var text1 = "hideo";
+      var text2 = "masao";
       while(i&lt;10){
-        console.dir([処理]);
+        [処理]
+        [処理]
+        [処理]
+        console.dir(text2);
       } 
       &lt;/script&gt; 
     &lt;/html&gt; 
     </pre>
     <p class="copy" id="copy7">選択</p>
+    <div class="select">
+        ここから選ぶ<br />
+        var text1 = text1;<br />
+        var text1 = text2;<br />
+        var text1 = text3;<br />
+        var text2 = text1;<br />
+        var text2 = text2;<br />
+        var text2 = text3;<br />
+        var text3 = text1;<br />
+        var text3 = text2;<br />
+        var text3 = text3;<br />
+        var text1 = "masao";<br />
+        var text2 = "hideo";<br />
+        </div>
   </div>
 
   <hr />
   <h2>条件分岐処理をしよう</h2>
   <div class="obj">
       条件が分岐する処理を書いてみましょう。(04.html)
-    <pre class="prettyprint" id="src6">
+    <pre class="prettyprint" id="src8">
     &lt;html&gt; 
       &lt;script&gt; 
       var text = 10;
@@ -232,14 +265,14 @@
       &lt;/script&gt; 
     &lt;/html&gt; 
     </pre>
-    <p class="copy" id="copy6">選択</p>
+    <p class="copy" id="copy8">選択</p>
   </div>
   <div class="obj">
       elseを使って２分岐する(05.html)
-    <pre class="prettyprint" id="src7">
+    <pre class="prettyprint" id="src9">
     &lt;html&gt; 
       &lt;script&gt; 
-      var text = 10;//数字を変える
+      var text = 11;//数字を変える
       if(text == 10){
         console.dir("10が入ってた");
       }else{
@@ -248,12 +281,12 @@
       &lt;/script&gt; 
     &lt;/html&gt; 
     </pre>
-    <p class="copy" id="copy7">選択</p>
+    <p class="copy" id="copy9">選択</p>
   </div>
   <div class="obj">
-      ループと分岐を使って5と６の間にーを表示しよう(c05.html)<br />
+      【問題】ループと分岐を使って5と６の間にーを表示しよう(c05.html)<br />
       [処理]に条件式を選び表示例のように出力しよう
-    <pre class="prettyprint" id="src8">
+    <pre class="prettyprint" id="src10">
     &lt;html&gt; 
       &lt;script&gt; 
       var i = 0;
@@ -267,42 +300,49 @@
       &lt;/script&gt; 
     &lt;/html&gt; 
     </pre>
-    <p class="copy" id="copy8">選択</p>
-    ここから選ぶ<br />
-    i&lt;5<br />
-    i&lt;6<br />
-    i&gt;5<br />
-    i&gt;6<br />
-    i==5<br />
-    i==6<br />
-    i!=5<br />
-    i!=6<br />
-
-    このように表示されれば正解です。<br />
-    表示例<br />
-    0<br />
-    1<br />
-    2<br />
-    3<br />
-    4<br />
-    5<br />
-    ー<br />
-    6<br />
-    7<br />
-    8<br />
-    9<br />
+    <p class="copy" id="copy10">選択</p>
+    <div class="select">
+      ここから選ぶ<br />
+      i&lt;5<br />
+      i&lt;6<br />
+      i&gt;5<br />
+      i&gt;6<br />
+      i==5<br />
+      i==6<br />
+      i!=5<br />
+      i!=6<br />
+    </div>
+    <div class="ans">
+      このように表示されれば正解です。<br />
+      表示例<br />
+      0<br />
+      1<br />
+      2<br />
+      3<br />
+      4<br />
+      5<br />
+      ー<br />
+      6<br />
+      7<br />
+      8<br />
+      9<br />
+    </div>
   </div>
+
+
   <hr />
   <h2>関数を作る</h2>
   <div class="obj">
     ソースを部品化する。(06.html)
-    <pre class="prettyprint" id="src9">
+    <pre class="prettyprint" id="src11">
     &lt;html&gt; 
       &lt;script&gt; 
       kurikaeshi();
+      kurikaeshi();
+      
       function kurikaeshi(){
            var i = 0;
-           while(i&lt;10){
+           while(i&lt;5){
              console.dir("masao:"+i);
              i = i + 1;
            }
@@ -310,15 +350,17 @@
       &lt;/script&gt; 
     &lt;/html&gt; 
     </pre>
-    <p class="copy" id="copy9">選択</p>
+    <p class="copy" id="copy11">選択</p>
   </div>
   <div class="obj">
       引数を使って関数の中に値を渡す(07.html)
-    <pre class="prettyprint" id="src10">
+    <pre class="prettyprint" id="src12">
     &lt;html&gt; 
       &lt;script&gt; 
-      kurikaeshi();
-      function kurikaeshi("masao"){
+      kurikaeshi("masao");
+      kurikaeshi("hideo");
+
+      function kurikaeshi(text){
             var i = 0;
             while(i&lt;10){
               console.dir(text+':'+i);
@@ -328,26 +370,55 @@
       &lt;/script&gt; 
     &lt;/html&gt; 
     </pre>
-    <p class="copy" id="copy10">選択</p>
+    <p class="copy" id="copy12">選択</p>
   </div>
+
   <div class="obj">
-    値を返す関数(c06.html)
-    <pre class="prettyprint" id="src11">
+    【問題】10より大きい数字を判定する関数を作ってみましょう(.html)<br />
+    10より大きい数字を入れると「10より大きい」とlogを出しましょう.
+    <pre class="prettyprint" id="src120">
     &lt;html&gt; 
       &lt;script&gt; 
-      var val = method();
-      console.log(val);
-      function method(){
-        return "masao";
+      kurikaeshi(9);
+      kurikaeshi(11);
+
+      function kurikaeshi(num){
+        [処理]        
       }      
       &lt;/script&gt; 
     &lt;/html&gt; 
     </pre>
-    <p class="copy" id="copy11">選択</p>
+    <p class="copy" id="copy120">選択</p>
   </div>
+
+
   <div class="obj">
-    関数に関数を渡す。(c07.html)
-    <pre class="prettyprint" id="src12">
+    【問題】値を返す関数を作ってみよう(c.html)
+    <pre class="prettyprint" id="src13">
+    &lt;html&gt; 
+      &lt;script&gt; 
+      var val1 = ichitasu(5);
+      var val2 = ichihiku(5);
+      console.log(val1);//6
+      console.log(val2);//4
+
+      function ichitash(num){
+        return num + 1;
+      }      
+
+      function ichihiku(num){
+        [処理]
+      }      
+      &lt;/script&gt; 
+    &lt;/html&gt; 
+    </pre>
+    <p class="copy" id="copy13">選択</p>
+  </div>
+
+
+  <div class="obj">
+    【問題】関数に関数を渡す。(c.html)
+    <pre class="prettyprint" id="src14">
     &lt;html&gt; 
       &lt;script&gt; 
       console.log(methodReturn());//hideoを表示
@@ -360,20 +431,21 @@
         return "hideo";
       }
       function method(callback){
-        console.log(callback());
+        var name = callback();
+        console.log(name);
       }
       &lt;/script&gt; 
     &lt;/html&gt; 
     </pre>
-    <p class="copy" id="copy12">選択</p>
+    <p class="copy" id="copy14">選択</p>
   </div>
 
   <hr />
   <h2>画面に出力しよう</h2>
   <div class="obj">
       画面情報を取得する。<br />
-      ※scriptタグの位置を変えること<br />      
-    <pre class="prettyprint" id="src13">
+      ※scriptタグの位置をbodyの下に変更<br />      
+    <pre class="prettyprint" id="src15">
     &lt;html&gt; 
       &lt;body&gt;
         &lt;h1&gt;タイトル&lt;/h1&gt;
@@ -383,12 +455,12 @@
       &lt;/script&gt; 
     &lt;/html&gt; 
     </pre>
-    <p class="copy" id="copy13">選択</p>
+    <p class="copy" id="copy15">選択</p>
   </div>
 
   <div class="obj">
       画面情報の一部を取得する。<br />      
-    <pre class="prettyprint" id="src14">
+    <pre class="prettyprint" id="src16">
     &lt;html&gt; 
       &lt;body&gt;
         &lt;h1 id="title"&gt;タイトル&lt;/h1&gt;
@@ -401,12 +473,43 @@
     </pre>
     ※タグにIDを追加すること<br />
     ※h1タグの文字情報の場所を確認すること<br />
-    <p class="copy" id="copy14">選択</p>
+    <p class="copy" id="copy16">選択</p>
   </div>
 
   <div class="obj">
+    【問題】id以外を使って画面情報の一部を取得する。<br />      
+    <pre class="prettyprint" id="src160">
+    &lt;html&gt; 
+      &lt;body&gt;
+        &lt;h2 class="title1"&gt;タイトル1&lt;/h2&gt;
+        &lt;h2 class="title2" &gt;タイトル2&lt;/h2&gt;
+        &lt;h3 &gt;タイトル3&lt;/h3&gt;
+        &lt;h4 &gt;タイトル4&lt;/h4&gt;
+      &lt;/body&gt;
+      &lt;script&gt;
+        var title1 = document.querySelector('.title'); 
+        console.dir(title1);//タイトル１
+        [処理]
+        console.dir(title2);//タイトル2
+        var title3 = document.querySelector('h3'); 
+        console.dir(title3);//タイトル3
+        [処理]
+        console.dir(title4);//タイトル4        
+        &lt;/script&gt; 
+    &lt;/html&gt; 
+    </pre>
+    ※タグにIDを追加すること<br />
+    ※h1タグの文字情報の場所を確認すること<br />
+    <p class="copy" id="copy160">選択</p>
+  </div>
+
+
+
+
+
+  <div class="obj">
     画面の情報を変更する<br />      
-    <pre class="prettyprint" id="src15">
+    <pre class="prettyprint" id="src17">
     &lt;html&gt; 
       &lt;body&gt;
         &lt;h1 id="title"&gt;タイトル&lt;/h1&gt;
@@ -417,12 +520,12 @@
       &lt;/script&gt; 
     &lt;/html&gt; 
     </pre>
-    <p class="copy" id="copy15">選択</p>
+    <p class="copy" id="copy17">選択</p>
   </div>
 
   <div class="obj">
     テキストボックスとボタンを作る<br />      
-    <pre class="prettyprint" id="src16">
+    <pre class="prettyprint" id="src18">
     &lt;html&gt; 
       &lt;body&gt;
         &lt;input type="text" id="tb"&gt;
@@ -430,16 +533,17 @@
       &lt;/body&gt;
     &lt;/html&gt; 
     </pre>
-    <p class="copy" id="copy16">選択</p>
+    <p class="copy" id="copy18">選択</p>
   </div>
 
   <div class="obj">
     ボタンをクリックされた時のイベントを割り当てる<br />      
-    <pre class="prettyprint" id="src17">
+    <pre class="prettyprint" id="src19">
       &lt;html&gt; 
-        &lt;body&gt;
-          &lt;h1 id="title"&gt;タイトル&lt;/h1&gt;
-        &lt;/body&gt;
+      &lt;body&gt;
+        &lt;input type="text" id="tb"&gt;
+        &lt;button id="bt"&gt; 押せ！&lt;/button&gt;    
+      &lt;/body&gt;
         &lt;script&gt;
         function test(){
           console.dir('clickされたよ！');
@@ -449,15 +553,15 @@
         &lt;/script&gt; 
       &lt;/html&gt; 
     </pre>
-    <p class="copy" id="copy17">選択</p>
+    <p class="copy" id="copy19">選択</p>
   </div>
   
   <div class="obj">
       テキストを取得する<br />      
-    <pre class="prettyprint" id="src18">
+    <pre class="prettyprint" id="src20">
       &lt;html&gt; 
         &lt;body&gt;
-          &lt;input type="text" id="tb"&gt;
+          &lt;input type="text" id="tb" value="masao"&gt;
           &lt;button id="bt"&gt;押せ！&lt;/button&gt;    
         &lt;/body&gt;
         &lt;script&gt;
@@ -470,12 +574,12 @@
         &lt;/script&gt; 
       &lt;/html&gt; 
     </pre>
-    <p class="copy" id="copy18">選択</p>
+    <p class="copy" id="copy20">選択</p>
   </div>
   
   <div class="obj">
     取得したテキストを出力する<br />      
-    <pre class="prettyprint" id="src19">
+    <pre class="prettyprint" id="src21">
       &lt;html&gt; 
         &lt;body&gt;
         &lt;input type="text" id="tb"&gt;
@@ -493,14 +597,14 @@
         &lt;/script&gt; 
       &lt;/html&gt; 
     </pre>
-    <p class="copy" id="copy19">選択</p>
+    <p class="copy" id="copy21">選択</p>
   </div>
 
   <hr />
   <h2>時間差で処理を実行しよう</h2>
   <div class="obj">
       時間差処理なしパターン<br />      
-      <pre class="prettyprint" id="src20">
+      <pre class="prettyprint" id="src22">
         &lt;html&gt; 
           &lt;script&gt;
           function log(){
@@ -512,12 +616,12 @@
           &lt;/script&gt; 
         &lt;/html&gt; 
       </pre>
-      <p class="copy" id="copy20">選択</p>
+      <p class="copy" id="copy22">選択</p>
     </div>
   
     <div class="obj">
       時間差処理なしパターン<br />      
-      <pre class="prettyprint" id="src21">
+      <pre class="prettyprint" id="src23">
         &lt;html&gt; 
           &lt;script&gt;
           function log(){
@@ -529,13 +633,13 @@
           &lt;/script&gt; 
         &lt;/html&gt; 
       </pre>
-      <p class="copy" id="copy21">選択</p>
+      <p class="copy" id="copy23">選択</p>
     </div>
 
-    <h2>乱数を使う</h2>>
+    <h2>乱数を使う</h2>
     <div class="obj">
         乱数を表示する<br />      
-      <pre class="prettyprint" id="src22">
+      <pre class="prettyprint" id="src24">
         &lt;html&gt; 
           &lt;script&gt;
           var num = Math.random();
@@ -543,12 +647,12 @@
           &lt;/script&gt; 
         &lt;/html&gt; 
       </pre>
-      <p class="copy" id="copy22">選択</p>
+      <p class="copy" id="copy24">選択</p>
     </div>
 
     <div class="obj">
       整数の乱数を作ろう<br />      
-      <pre class="prettyprint" id="src23">
+      <pre class="prettyprint" id="src25">
         &lt;html&gt; 
           &lt;script&gt;
           var num = Math.random();
@@ -560,17 +664,16 @@
           &lt;/script&gt; 
         &lt;/html&gt; 
       </pre>
-      <p class="copy" id="copy23">選択</p>
+      <p class="copy" id="copy25">選択</p>
     </div>
 
     <div class="obj">
-      整数の乱数を作ろう<br />      
-      <pre class="prettyprint" id="src24">
+      整数の乱数を作る関数を作ろう<br />      
+      <pre class="prettyprint" id="src26">
         &lt;html&gt; 
           &lt;script&gt;
           function ransuu(mul){
             var num = Math.random();
-            var num2 = Math.floor(num);
             var num3 = Math.floor(num*mul);
             return num3;
           }
@@ -579,29 +682,31 @@
           &lt;/script&gt; 
         &lt;/html&gt; 
       </pre>
-      <p class="copy" id="copy24">選択</p>
+      <p class="copy" id="copy26">選択</p>
     </div>
 
 
 
   </body>
   <script>
-    function select(num){
+    function select(obj){
         var s = window.getSelection();
         s.empty();
         var range = document.createRange();
-        range.selectNode(document.querySelector("#src"+num));
+        range.selectNode(obj.querySelector('pre'));
         s.addRange(range);    
     }
 
     (()=>{
-        let numArray = [2,3];
-        for(let num of numArray){
-            document.querySelector('#copy'+num).addEventListener('click',()=>{
-                console.log(num);
-                select(num);
+        let objArray = document.querySelectorAll('.obj');
+        for(let obj of objArray){
+          let copy = obj.querySelector('p');
+          copy.addEventListener('click',()=>{
+                console.log(copy.id);
+                select(obj);
             });
         }
+
 
         let htmlImage = document.querySelector('#htmlImage');
         let cssImage = document.querySelector('#cssImage');
