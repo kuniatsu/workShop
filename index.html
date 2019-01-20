@@ -62,6 +62,11 @@
     .ans{
       border: double 5px #aaa;
     }
+
+    .blind{
+      /* display:none; */
+    }
+
   </style>
 
   <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
@@ -123,33 +128,35 @@
       【問題】//〜処理〜と書いてあるところに下にあるコードから必要なものを選んで完成させてください。<br />
       hideo<br />
       masao<br />
-      と表示できれば完成です。(c01.html)<br />      
-    <pre class="prettyprint" id="src3">
-    &lt;html&gt; 
-        &lt;script&gt; 
-        var text1 = "masao";
-        var text2 = "hideo";
-        //〜処理〜
-        console.dir(text1);//hideoを表示
-        console.dir(text2);//masaoを表示    
-        &lt;/script&gt; 
-    &lt;/html&gt; 
-    </pre>
-    <p class="copy" id="copy3">選択</p>
-    <div class="select">
-    ここから選ぶ<br />
-    var text1 = text1;<br />
-    var text1 = text2;<br />
-    var text1 = text3;<br />
-    var text2 = text1;<br />
-    var text2 = text2;<br />
-    var text2 = text3;<br />
-    var text3 = text1;<br />
-    var text3 = text2;<br />
-    var text3 = text3;<br />
-    var text1 = "masao";<br />
-    var text2 = "hideo";<br />
-    </div>
+      と表示できれば完成です。(03.html)<br />      
+    <span class="blind">
+      <pre class="prettyprint" id="src3">
+      &lt;html&gt; 
+          &lt;script&gt; 
+          var text1 = "masao";
+          var text2 = "hideo";
+          //〜処理〜
+          console.dir(text1);//hideoを表示
+          console.dir(text2);//masaoを表示    
+          &lt;/script&gt; 
+      &lt;/html&gt; 
+      </pre>
+      <p class="copy" id="copy3">選択</p>
+      <div class="select">
+      ここから選ぶ<br />
+      var text1 = text1;<br />
+      var text1 = text2;<br />
+      var text1 = text3;<br />
+      var text2 = text1;<br />
+      var text2 = text2;<br />
+      var text2 = text3;<br />
+      var text3 = text1;<br />
+      var text3 = text2;<br />
+      var text3 = text3;<br />
+      var text1 = "masao";<br />
+      var text2 = "hideo";<br />
+      </div>
+    </span>
   </div>
 
   <div class="obj">
@@ -160,7 +167,7 @@
         41<br />
         12<br />
       </div>
-      と表示できれば完成です。(c02.html)<br />      
+      と表示できれば完成です。(04.html)<br />      
     <pre class="prettyprint" id="src4">
     &lt;html&gt; 
         &lt;script&gt; 
@@ -181,7 +188,7 @@
   <hr />
   <h2>繰り返し処理をしよう</h2>
   <div class="obj">
-    繰り返しの処理を書いてみましょう。(03.html)
+    繰り返しの処理を書いてみましょう。(05.html)
     <pre class="prettyprint" id="src5">
     &lt;html&gt; 
       &lt;script&gt; 
@@ -196,7 +203,7 @@
     <p class="copy" id="copy5">選択</p>
   </div>
   <div class="obj">
-    【問題】繰り返しの条件を書いてみましょう。(c03.html)
+    【問題】繰り返しの条件を書いてみましょう。(06.html)
     <pre class="prettyprint" id="src6">
     &lt;html&gt; 
       &lt;script&gt; 
@@ -218,7 +225,7 @@
   </div>
 
   <div class="obj">
-    【問題】下にあるコードを使ってhideoとmasaoを交互に表示してみましょう(c04.html)
+    【問題】下にあるコードを使ってhideoとmasaoを交互に表示してみましょう(07.html)
     <pre class="prettyprint" id="src7">
     &lt;html&gt; 
       &lt;script&gt; 
@@ -254,7 +261,7 @@
   <hr />
   <h2>条件分岐処理をしよう</h2>
   <div class="obj">
-      条件が分岐する処理を書いてみましょう。(04.html)
+      条件が分岐する処理を書いてみましょう。(08.html)
     <pre class="prettyprint" id="src8">
     &lt;html&gt; 
       &lt;script&gt; 
@@ -267,8 +274,9 @@
     </pre>
     <p class="copy" id="copy8">選択</p>
   </div>
+
   <div class="obj">
-      elseを使って２分岐する(05.html)
+      elseを使って２分岐する(09.html)
     <pre class="prettyprint" id="src9">
     &lt;html&gt; 
       &lt;script&gt; 
@@ -284,7 +292,7 @@
     <p class="copy" id="copy9">選択</p>
   </div>
   <div class="obj">
-      【問題】ループと分岐を使って5と６の間にーを表示しよう(c05.html)<br />
+      【問題】ループと分岐を使って5と６の間にーを表示しよう(10.html)<br />
       [処理]に条件式を選び表示例のように出力しよう
     <pre class="prettyprint" id="src10">
     &lt;html&gt; 
@@ -333,7 +341,7 @@
   <hr />
   <h2>関数を作る</h2>
   <div class="obj">
-    ソースを部品化する。(06.html)
+    ソースを部品化する。(11.html)
     <pre class="prettyprint" id="src11">
     &lt;html&gt; 
       &lt;script&gt; 
@@ -352,8 +360,9 @@
     </pre>
     <p class="copy" id="copy11">選択</p>
   </div>
+
   <div class="obj">
-      引数を使って関数の中に値を渡す(07.html)
+      引数を使って関数の中に値を渡す(12.html)
     <pre class="prettyprint" id="src12">
     &lt;html&gt; 
       &lt;script&gt; 
@@ -374,8 +383,8 @@
   </div>
 
   <div class="obj">
-    【問題】10より大きい数字を判定する関数を作ってみましょう(.html)<br />
-    10より大きい数字を入れると「10より大きい」とlogを出しましょう.
+    【問題】10より大きい数字を判定する関数を作ってみましょう<br />
+    10より大きい数字を入れると「10より大きい」とlogを出しましょう.(13.html)
     <pre class="prettyprint" id="src120">
     &lt;html&gt; 
       &lt;script&gt; 
@@ -393,7 +402,7 @@
 
 
   <div class="obj">
-    【問題】値を返す関数を作ってみよう(c.html)
+    【問題】値を返す関数を作ってみよう(14.html)
     <pre class="prettyprint" id="src13">
     &lt;html&gt; 
       &lt;script&gt; 
@@ -417,7 +426,7 @@
 
 
   <div class="obj">
-    【問題】関数に関数を渡す。(c.html)
+    【問題】関数に関数を渡す。(15.html)
     <pre class="prettyprint" id="src14">
     &lt;html&gt; 
       &lt;script&gt; 
@@ -444,7 +453,7 @@
   <h2>画面に出力しよう</h2>
   <div class="obj">
       画面情報を取得する。<br />
-      ※scriptタグの位置をbodyの下に変更<br />      
+      ※scriptタグの位置をbodyの下に変更(16.html)<br />      
     <pre class="prettyprint" id="src15">
     &lt;html&gt; 
       &lt;body&gt;
@@ -459,7 +468,7 @@
   </div>
 
   <div class="obj">
-      画面情報の一部を取得する。<br />      
+      画面情報の一部を取得する。(17.html)<br />      
     <pre class="prettyprint" id="src16">
     &lt;html&gt; 
       &lt;body&gt;
@@ -477,7 +486,7 @@
   </div>
 
   <div class="obj">
-    【問題】id以外を使って画面情報の一部を取得する。<br />      
+    【問題】id以外を使って画面情報の一部を取得する。(18.html)<br />      
     <pre class="prettyprint" id="src160">
     &lt;html&gt; 
       &lt;body&gt;
@@ -508,7 +517,7 @@
 
 
   <div class="obj">
-    画面の情報を変更する<br />      
+    画面の情報を変更する(19.html)<br />      
     <pre class="prettyprint" id="src17">
     &lt;html&gt; 
       &lt;body&gt;
@@ -524,7 +533,7 @@
   </div>
 
   <div class="obj">
-    テキストボックスとボタンを作る<br />      
+    テキストボックスとボタンを作る(20.html)<br />      
     <pre class="prettyprint" id="src18">
     &lt;html&gt; 
       &lt;body&gt;
@@ -537,7 +546,7 @@
   </div>
 
   <div class="obj">
-    ボタンをクリックされた時のイベントを割り当てる<br />      
+    ボタンをクリックされた時のイベントを割り当てる(21.html)<br />      
     <pre class="prettyprint" id="src19">
       &lt;html&gt; 
       &lt;body&gt;
@@ -557,7 +566,7 @@
   </div>
   
   <div class="obj">
-      テキストを取得する<br />      
+      テキストを取得する(22.html)<br />      
     <pre class="prettyprint" id="src20">
       &lt;html&gt; 
         &lt;body&gt;
@@ -578,7 +587,7 @@
   </div>
   
   <div class="obj">
-    取得したテキストを出力する<br />      
+    取得したテキストを出力する(23.html)<br />      
     <pre class="prettyprint" id="src21">
       &lt;html&gt; 
         &lt;body&gt;
@@ -601,7 +610,7 @@
   </div>
 
   <hr />
-  <h2>時間差で処理を実行しよう</h2>
+  <h2>時間差で処理を実行しよう(24.html)</h2>
   <div class="obj">
       時間差処理なしパターン<br />      
       <pre class="prettyprint" id="src22">
@@ -620,7 +629,7 @@
     </div>
   
     <div class="obj">
-      時間差処理なしパターン<br />      
+      時間差処理なしパターン(25.html)<br />      
       <pre class="prettyprint" id="src23">
         &lt;html&gt; 
           &lt;script&gt;
@@ -638,7 +647,7 @@
 
     <h2>乱数を使う</h2>
     <div class="obj">
-        乱数を表示する<br />      
+        乱数を表示する(26.html)<br />      
       <pre class="prettyprint" id="src24">
         &lt;html&gt; 
           &lt;script&gt;
@@ -651,7 +660,7 @@
     </div>
 
     <div class="obj">
-      整数の乱数を作ろう<br />      
+      整数の乱数を作ろう(27.html)<br />      
       <pre class="prettyprint" id="src25">
         &lt;html&gt; 
           &lt;script&gt;
@@ -668,7 +677,7 @@
     </div>
 
     <div class="obj">
-      整数の乱数を作る関数を作ろう<br />      
+      整数の乱数を作る関数を作ろう(28.html)<br />      
       <pre class="prettyprint" id="src26">
         &lt;html&gt; 
           &lt;script&gt;
