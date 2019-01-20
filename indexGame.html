@@ -279,7 +279,7 @@
   </div>
   
   <div class="obj">
-    【問題1】ボタン(bt)のinnerText(ボタンに書かれている「ボタンの中」)をconsole.dirで表示してみよう<br /> 
+    【問題1】ボタン(bt)のinnerText(ボタンに書かれている「押せ！」)をconsole.dirで表示してみよう<br /> 
     [処理]と書かれている部分にjsを書いて下さい。     
     <pre class="prettyprint" id="src35">
       &lt;html&gt; 
@@ -341,7 +341,8 @@
   </div>
   
   <div class="obj">
-      【問題】ボタンを押したら説明文が変わるように変更<br />      
+      【問題】ボタンを押したら説明文が変わるように変更<br /> 
+       可能であれば、&lt;input&gt;内に書いた文字に変更    
     <pre class="prettyprint" id="src38">
       &lt;html&gt;
         &lt;body&gt;
@@ -356,7 +357,6 @@
           function say(){
             console.dir('クリックされた');
           }        
-          /* ※説明文が変わるタイミングを変えるだけ、１行追加して完成させよう*/
         &lt;/script&gt; 
       &lt;/html&gt; 
     </pre>
@@ -537,7 +537,7 @@
             var keta = 10;
             var bt = document.querySelector('#bt');
             var tt = document.querySelector('#tt');
-            var num = document.querySelector'#num');
+            var num = document.querySelector('#num');
             bt.addEventListener('click',say);
           
             function say(){

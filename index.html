@@ -63,9 +63,9 @@
       border: double 5px #aaa;
     }
 
-    .blind{
-      /* display:none; */
-    }
+    /* .blind{
+       display:none; 
+    } */
 
   </style>
 
@@ -75,7 +75,10 @@
 <body>
   <h2>00.推奨環境</h2>
   <div class="container">
-    <p>URL：</p>
+    <p>URL：https://jsseminartext.firebaseapp.com</p>
+    <p>https://github.com/kuniatsu/workShop</p>
+
+        
     <p>エディッタ：サクラエディッタ・terapad・VisualStudioCode</p>
     <p>ブラウザ：chrome</p>
   </div>
@@ -124,6 +127,9 @@
     <p class="copy" id="copy2">選択</p>
   </div>
 
+<!---   2回目以降はvarがいらない説明--->>
+
+
   <div class="obj">
       【問題】//〜処理〜と書いてあるところに下にあるコードから必要なものを選んで完成させてください。<br />
       hideo<br />
@@ -144,17 +150,17 @@
       <p class="copy" id="copy3">選択</p>
       <div class="select">
       ここから選ぶ<br />
-      var text1 = text1;<br />
-      var text1 = text2;<br />
-      var text1 = text3;<br />
-      var text2 = text1;<br />
-      var text2 = text2;<br />
-      var text2 = text3;<br />
+      text1 = text1;<br />
+      text1 = text2;<br />
+      text1 = text3;<br />
+      text2 = text1;<br />
+      text2 = text2;<br />
+      text2 = text3;<br />
       var text3 = text1;<br />
       var text3 = text2;<br />
       var text3 = text3;<br />
-      var text1 = "masao";<br />
-      var text2 = "hideo";<br />
+      text1 = "masao";<br />
+      text2 = "hideo";<br />
       </div>
     </span>
   </div>
@@ -218,8 +224,8 @@
     </pre>
     <p class="copy" id="copy6">選択</p>
     <div class="select">
-    ①0~20を表示してみよう!<br />
-    ②1~10を表示してみよう！<br />
+    ①0~19を表示してみよう!<br />
+    ②1~9を表示してみよう！<br />
     ③2・4・6・8を表示してみよう!<br />
     ④20~1を表示してみよう！<br />
     </div>
@@ -245,17 +251,17 @@
     <p class="copy" id="copy7">選択</p>
     <div class="select">
         ここから選ぶ<br />
-        var text1 = text1;<br />
-        var text1 = text2;<br />
-        var text1 = text3;<br />
-        var text2 = text1;<br />
-        var text2 = text2;<br />
-        var text2 = text3;<br />
+        text1 = text1;<br />
+        text1 = text2;<br />
+        text1 = text3;<br />
+        text2 = text1;<br />
+        text2 = text2;<br />
+        text2 = text3;<br />
         var text3 = text1;<br />
         var text3 = text2;<br />
         var text3 = text3;<br />
-        var text1 = "masao";<br />
-        var text2 = "hideo";<br />
+        text1 = "masao";<br />
+        text2 = "hideo";<br />
         </div>
   </div>
 
@@ -268,7 +274,7 @@
       &lt;script&gt; 
       var text = 10;
       if(text == 10){
-      console.dir("10が入ってた");
+        console.dir("10が入ってた");
       }  
       &lt;/script&gt; 
     &lt;/html&gt; 
@@ -592,17 +598,17 @@
     <pre class="prettyprint" id="src21">
       &lt;html&gt; 
         &lt;body&gt;
-        &lt;input type="text" id="tb"&gt;
+        &lt;input type="text" id="tb" value="masao"&gt;
         &lt;button id="bt"&gt;押せ！&lt;/button&gt;
         &lt;p id="output"&gt;未入力&lt;/p&gt;  
         &lt;/body&gt;
         &lt;script&gt;
         function test(){
-          var tb = document.querySelector('tb');
-          var p = document.querySelector('output');
+          var tb = document.querySelector('#tb');
+          var p = document.querySelector('#output');
           p.innerText = tb.value;
         }
-        var bt = document.querySelector('bt');
+        var bt = document.querySelector('#bt');
         bt.addEventListener('click',test);   
         &lt;/script&gt; 
       &lt;/html&gt; 
