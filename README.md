@@ -3,7 +3,7 @@ https://jsseminartext.firebaseapp.com/indexGame.html
 
 ### 変更予定  
 
-・問題は隠す  
+~~・問題は隠す~~  
 ・画像で伝わるように変更  
 ・firebase→GitHubPages  
 ~~・querySelectorの廃止~~
