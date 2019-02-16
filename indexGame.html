@@ -1,6 +1,6 @@
 <html>
 <head>
-  <title>js講座テキスト 19/01/20</title>
+  <title>jsGame講座テキスト 19/02/17</title>
   <style>
     body{
         margin-left:20%;
@@ -75,7 +75,7 @@
   <hr>
   <h2>プログラムを書いてみよう</h2>
   <div class="obj">
-    値を返す関数(.html)
+    値を返す関数(G1.html)
     <pre class="prettyprint" id="src25">
     &lt;html&gt; 
       &lt;script&gt; 
@@ -90,7 +90,7 @@
     <p class="copy" id="copy25">選択</p>
   </div>
   <div class="obj">
-    複数引数の関数(.html)
+    複数引数の関数(G2.html)
     <pre class="prettyprint" id="src26">
     &lt;html&gt; 
       &lt;script&gt; 
@@ -106,7 +106,7 @@
   </div>
 
   <div class="obj">
-    文字と数字の引数の関数(.html)
+    文字と数字の引数の関数(G3.html)
     <pre class="prettyprint" id="src27">
     &lt;html&gt; 
       &lt;script&gt; 
@@ -126,7 +126,7 @@
   </div>
 
   <div class="obj">
-    値を返す関数(.html)
+    引数があり値を返す関数(G4.html)
     <pre class="prettyprint" id="src28">
     &lt;html&gt; 
       &lt;script&gt; 
@@ -145,7 +145,7 @@
 
 
   <div class="obj">
-    関数を値のように扱う。(.html)
+    関数を値のように扱う。(G5.html)
     <pre class="prettyprint" id="src290">
     &lt;html&gt; 
       &lt;script&gt; 
@@ -161,8 +161,11 @@
     <p class="copy" id="copy290">選択</p>
   </div>
 
+
+
+
   <div class="obj">
-    関数に関数を渡す。(c.html)
+    関数に関数を渡す。(G6.html)
     <pre class="prettyprint" id="src14">
     &lt;html&gt; 
       &lt;script&gt; 
@@ -191,7 +194,7 @@
   <hr />
   <h2>タイマー処理</h2>
   <div class="obj">
-      タイマー処理をしていない(比較のため)<br />      
+    タイマー処理をしていない(比較のため)(G7.html)<br />      
     <pre class="prettyprint" id="src30">
     &lt;html&gt; 
       &lt;script&gt; 
@@ -207,7 +210,7 @@
   </div>
 
   <div class="obj">
-      三秒タイマー処理(3000ミリ秒は３秒)<br />      
+      三秒タイマー処理(3000ミリ秒は３秒)(G8.html)<br />      
     <pre class="prettyprint" id="src31">
     &lt;html&gt; 
       &lt;script&gt;
@@ -215,7 +218,8 @@
         console.dir('end');
       }
       console.dir('start');
-      setTimeout(say, 3000);    
+      setTimeout(say, 3000); 
+      console.dir('wait');   
       &lt;/script&gt; 
     &lt;/html&gt; 
     </pre>
@@ -230,7 +234,7 @@
     画面のを作る<br />      
     <pre class="prettyprint" id="src32">
     &lt;html&gt; 
-      &lt;body&gt;
+      &lt;body style="text-align: center;"</body>&gt;
         &lt;p id='num'&gt;ここに説明文&lt;/p&gt;
         &lt;input id='tt' value='テキストボックスの中'&gt;
         &lt;button id='bt'&gt;ボタンの中&lt;/button&gt;    
@@ -244,7 +248,7 @@
       画面の情報を取得<br />      
     <pre class="prettyprint" id="src33">
       &lt;html&gt; 
-        &lt;body&gt;
+        &lt;body style="text-align: center;"</body>&gt;
           &lt;p id='num'&gt;ここに説明文&lt;/p&gt;
           &lt;input id='tt' value='テキストボックスの中'&gt;
           &lt;button id='bt'&gt;ボタンの中&lt;/button&gt;    
@@ -262,7 +266,7 @@
       テキストボックス(tt)のvalue(「テキストボックスの中」)をconsole.dirで表示してみよう<br />      
     <pre class="prettyprint" id="src34">
       &lt;html&gt; 
-        &lt;body&gt;
+        &lt;body style="text-align: center;"</body>&gt;
           &lt;p id='num'&gt;ここに説明文&lt;/p&gt;
           &lt;input id='tt' value='テキストボックスの中'&gt;
           &lt;button id='bt'&gt;ボタンの中&lt;/button&gt;    
@@ -283,7 +287,7 @@
     [処理]と書かれている部分にjsを書いて下さい。     
     <pre class="prettyprint" id="src35">
       &lt;html&gt; 
-        &lt;body&gt;
+        &lt;body style="text-align: center;"</body>&gt;
           &lt;input type="text" id="tb"&gt;
           &lt;button id="bt"&gt;押せ！&lt;/button&gt;    
         &lt;/body&gt;
@@ -300,7 +304,7 @@
     ボタンにイベントを割り当てる<br />      
     <pre class="prettyprint" id="src36">
       &lt;html&gt; 
-        &lt;body&gt;
+        &lt;body style="text-align: center;"</body>&gt;
           &lt;input type="text" id="tb"&gt;
           &lt;button id="bt"&gt;押せ！&lt;/button&gt; 
         &lt;/body&gt;
@@ -323,7 +327,7 @@
     説明文を変えてみよう<br />      
     <pre class="prettyprint" id="src37">
       &lt;html&gt; 
-        &lt;body&gt;
+        &lt;body style="text-align: center;"</body>&gt;
           &lt;p id='num'&gt;ここに説明文&lt;/p&gt;
           &lt;input id='tt' value='テキストボックスの中'&gt;
           &lt;button id='bt'&gt;ボタンの中&lt;/button&gt;    
@@ -345,7 +349,7 @@
        可能であれば、&lt;input&gt;内に書いた文字に変更    
     <pre class="prettyprint" id="src38">
       &lt;html&gt;
-        &lt;body&gt;
+        &lt;body style="text-align: center;"</body>&gt;
           &lt;p id='num'&gt;ここに説明文&lt;/p&gt;
           &lt;input id='tt' value='テキストボックスの中'&gt;
           &lt;button id='bt'&gt;ボタンの中&lt;/button&gt;    
@@ -367,7 +371,7 @@
     乱数が表示されるように変更しよう<br />      
     <pre class="prettyprint" id="src39">
       &lt;html&gt; 
-        &lt;body&gt;
+        &lt;body style="text-align: center;"</body>&gt;
           &lt;p id='num'&gt;ここに説明文&lt;/p&gt;
           &lt;input id='tt' value='テキストボックスの中'&gt;
           &lt;button id='bt'&gt;ボタンの中&lt;/button&gt;    
@@ -392,7 +396,7 @@
       整数の乱数を作ろう<br />      
       <pre class="prettyprint" id="src40">
         &lt;html&gt; 
-          &lt;body&gt;
+          &lt;body style="text-align: center;"</body>&gt;
             &lt;p id='num'&gt;ここに説明文&lt;/p&gt;
             &lt;input id='tt' value='テキストボックスの中'&gt;
             &lt;button id='bt'&gt;ボタンの中&lt;/button&gt;    
@@ -422,7 +426,7 @@
       【問題3】ボタンを押すたびに桁が増えていくように変更<br />      
       <pre class="prettyprint" id="src41">
         &lt;html&gt; 
-        &lt;body&gt;
+        &lt;body style="text-align: center;"</body>&gt;
           &lt;p id='num'&gt;ここに説明文&lt;/p&gt;
           &lt;input id='tt' value='テキストボックスの中'&gt;
           &lt;button id='bt'&gt;ボタンの中&lt;/button&gt;    
@@ -452,7 +456,7 @@
         乱数作成を関数にしてみよう<br />      
         <pre class="prettyprint" id="src42">
           &lt;html&gt; 
-            &lt;body&gt;
+            &lt;body style="text-align: center;"</body>&gt;
               &lt;p id='num'&gt;ここに説明文&lt;/p&gt;
               &lt;input id='tt' value='テキストボックスの中'&gt;
               &lt;button id='bt'&gt;ボタンの中&lt;/button&gt;    
@@ -487,7 +491,7 @@
         テキストボックスと答え合わせをする。<br />      
         <pre class="prettyprint" id="src43">
           &lt;html&gt; 
-            &lt;body&gt;
+            &lt;body style="text-align: center;"</body>&gt;
               &lt;p id='num'&gt;ここに説明文&lt;/p&gt;
               &lt;input id='tt' value='テキストボックスの中'&gt;
               &lt;button id='bt'&gt;ボタンの中&lt;/button&gt;    
@@ -528,7 +532,7 @@
         【問題4】正解しないと桁数が増えないようにする<br />      
         <pre class="prettyprint" id="src44">
           &lt;html&gt; 
-            &lt;body&gt;
+            &lt;body style="text-align: center;"</body>&gt;
               &lt;p id='num'&gt;ここに説明文&lt;/p&gt;
               &lt;input id='tt' value='テキストボックスの中'&gt;
               &lt;button id='bt'&gt;ボタンの中&lt;/button&gt;    
@@ -566,7 +570,7 @@
           テキストボックスを空にする（毎回消すのめんどくさいから）&ボタンの名前もかえる(ずっとスタートは変)<br />      
         <pre class="prettyprint" id="src45">
           &lt;html&gt; 
-            &lt;body&gt;
+            &lt;body style="text-align: center;"</body>&gt;
               &lt;p id='num'&gt;ここに説明文&lt;/p&gt;
               &lt;input id='tt' value='テキストボックスの中'&gt;
               &lt;button id='bt'&gt;ボタンの中&lt;/button&gt;    
@@ -606,7 +610,7 @@
         入力するときは数字を消す（写すだけから脱却！!でも正解できなくなってしまう！）<br />      
         <pre class="prettyprint" id="src46">
           &lt;html&gt; 
-            &lt;body&gt;
+            &lt;body style="text-align: center;"</body>&gt;
               &lt;p id='num'&gt;ここに説明文&lt;/p&gt;
               &lt;input id='tt' value='テキストボックスの中'&gt;
               &lt;button id='bt'&gt;ボタンの中&lt;/button&gt;    
@@ -652,7 +656,7 @@
         【問題5】正解ができるように変更しよう<br />      
         <pre class="prettyprint" id="src47">
           &lt;html&gt; 
-            &lt;body&gt;
+            &lt;body style="text-align: center;"</body>&gt;
               &lt;p id='num'&gt;ここに説明文&lt;/p&gt;
               &lt;input id='tt' value='テキストボックスの中'&gt;
               &lt;button id='bt'&gt;ボタンの中&lt;/button&gt;    
