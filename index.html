@@ -1,6 +1,6 @@
 <html>
 <head>
-  <title>js講座テキスト 19/01/20</title>
+  <title>js講座テキスト 19/02/17</title>
   <style>
     body{
         margin-left:20%;
@@ -483,7 +483,7 @@
         &lt;h1 id="title"&gt;タイトル&lt;/h1&gt;
       &lt;/body&gt;
       &lt;script&gt;
-        var a = document.querySelector('#title'); 
+        var a = document.getElementById('title'); 
         console.dir(a);
       &lt;/script&gt; 
     &lt;/html&gt; 
@@ -498,20 +498,32 @@
     <pre class="prettyprint" id="src160">
     &lt;html&gt; 
       &lt;body&gt;
-        &lt;h2 class="title1"&gt;タイトル1&lt;/h2&gt;
-        &lt;h2 class="title2" &gt;タイトル2&lt;/h2&gt;
-        &lt;h3 &gt;タイトル3&lt;/h3&gt;
-        &lt;h4 &gt;タイトル4&lt;/h4&gt;
+        &lt;h1  id="title1"&gt;タイトル1&lt;/h1&gt;
+        &lt;h2 class="title2"&gt;タイトル2&lt;/h2&gt;
+        &lt;h2 class="title3" &gt;タイトル3&lt;/h2&gt;
+        &lt;h3 &gt;タイトル4&lt;/h3&gt;
+        &lt;h4 &gt;タイトル5&lt;/h4&gt;
       &lt;/body&gt;
       &lt;script&gt;
-        var title1 = document.querySelector('.title'); 
-        console.dir(title1);//タイトル１
-        [処理]
+        //getElementByIdでIDを指定して取得
+        var title1 = document.getElementById('title1'); 
+        console.dir(title1);//タイトル1
+
+        //getElementsByClassNameでclassを指定して取得
+        var title2 = document.getElementsByClassName('title2'); 
         console.dir(title2);//タイトル2
-        var title3 = document.querySelector('h3'); 
-        console.dir(title3);//タイトル3
+
+        //getElementsByClassNameでclassを指定して取得
         [処理]
-        console.dir(title4);//タイトル4        
+        console.dir(title3);//タイトル3
+
+        //getElementsByTagNameでタグ名を指定して取得
+        var title4 = document.getElementsByTagName('h3'); 
+        console.dir(title4);//タイトル4
+
+        //getElementsByTagNameでタグ名を指定して取得
+        [処理]
+        console.dir(title5);//タイトル5        
         &lt;/script&gt; 
     &lt;/html&gt; 
     </pre>
@@ -532,7 +544,7 @@
         &lt;h1 id="title"&gt;タイトル&lt;/h1&gt;
       &lt;/body&gt;
       &lt;script&gt;
-        var a = document.querySelector('#title');
+        var a = document.getElementById('title');
         a.innerText = "まさお";
       &lt;/script&gt; 
     &lt;/html&gt; 
@@ -565,7 +577,7 @@
         function test(){
           console.dir('clickされたよ！');
         }        
-        var bt = document.querySelector('#bt');
+        var bt = document.getElementById('bt');
         bt.addEventListener('click',test);
         &lt;/script&gt; 
       &lt;/html&gt; 
@@ -583,10 +595,10 @@
         &lt;/body&gt;
         &lt;script&gt;
         function test(){
-          var tb = document.querySelector('#tb');
+          var tb = document.getElementById('tb');
           console.dir(tb);
         }      
-        var bt = document.querySelector('#bt');
+        var bt = document.getElementById('bt');
         bt.addEventListener('click',test);
         &lt;/script&gt; 
       &lt;/html&gt; 
@@ -605,11 +617,11 @@
         &lt;/body&gt;
         &lt;script&gt;
         function test(){
-          var tb = document.querySelector('#tb');
-          var p = document.querySelector('#output');
+          var tb = document.getElementById('tb');
+          var p = document.getElementById('output');
           p.innerText = tb.value;
         }
-        var bt = document.querySelector('#bt');
+        var bt = document.getElementById('bt');
         bt.addEventListener('click',test);   
         &lt;/script&gt; 
       &lt;/html&gt; 

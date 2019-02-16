@@ -272,7 +272,7 @@
           &lt;button id='bt'&gt;ボタンの中&lt;/button&gt;    
         &lt;/body&gt;
         &lt;script&gt;
-          var a = document.querySelector('#tt');
+          var a = document.getElementById('tt');
           console.dir(a);
           console.dir(a.value);     
           /*  ※a.valueはaの中のvalueっということ */ 
@@ -309,7 +309,7 @@
           &lt;button id="bt"&gt;押せ！&lt;/button&gt; 
         &lt;/body&gt;
         &lt;script&gt;
-          var bt = document.querySelector('#bt');
+          var bt = document.getElementById('bt');
           console.dir(bt);
           bt.addEventListener('click',say);
         
@@ -333,7 +333,7 @@
           &lt;button id='bt'&gt;ボタンの中&lt;/button&gt;    
         &lt;/body&gt;
         &lt;script&gt;
-          var num = document.querySelector('#num');
+          var num = document.getElementById('num');
           console.dir(num);
           num.innerText = "0123456789";
         
@@ -355,8 +355,8 @@
           &lt;button id='bt'&gt;ボタンの中&lt;/button&gt;    
         &lt;/body&gt;
         &lt;script&gt;
-          var bt = document.querySelector('#bt');
-          var num = document.querySelector('#num');
+          var bt = document.getElementById('bt');
+          var num = document.getElementById('num');
           bt.addEventListener('click',say);
           function say(){
             console.dir('クリックされた');
@@ -377,8 +377,8 @@
           &lt;button id='bt'&gt;ボタンの中&lt;/button&gt;    
         &lt;/body&gt;
         &lt;script&gt;
-          var bt = document.querySelector('#bt');
-          var num = document.querySelector('#num');
+          var bt = document.getElementById('bt');
+          var num = document.getElementById('num');
           bt.addEventListener('click',say);
         
           function say(){
@@ -403,8 +403,8 @@
           &lt;/body&gt;
           &lt;script&gt;
           var keta = 100;
-          var bt = document.querySelector('#bt');
-          var num = document.querySelector('#num');
+          var bt = document.querySelector('bt');
+          var num = document.getElementById('num');
           bt.addEventListener('click',say);
         
           function say(){
@@ -433,8 +433,8 @@
         &lt;/body&gt;
           &lt;script&gt;
             var keta = 10;
-            var bt = document.querySelector('#bt');
-            var num = document.querySelector('#num');
+            var bt = document.getElementById('bt');
+            var num = document.getElementById('num');
             bt.addEventListener('click',say);
           
             function say(){
@@ -463,8 +463,8 @@
             &lt;/body&gt;
             &lt;script&gt;
             var keta = 10;
-            var bt = document.querySelector('#bt');
-            var num = document.querySelector('#num');
+            var bt = document.getElementById('bt');
+            var num = document.getElementById('num');
             bt.addEventListener('click',say);
           
             function say(){
@@ -498,9 +498,9 @@
             &lt;/body&gt;
             &lt;script&gt;
               var keta = 10;
-              var bt = document.querySelector('#bt');
-              var tt = document.querySelector('#tt');
-              var num = document.querySelector('#num');
+              var bt = document.getElementById('bt');
+              var tt = document.getElementById('tt');
+              var num = document.getElementById('num');
               bt.addEventListener('click',say);
             
               function say(){
@@ -539,9 +539,9 @@
             &lt;/body&gt;
             &lt;script&gt;
             var keta = 10;
-            var bt = document.querySelector('#bt');
-            var tt = document.querySelector('#tt');
-            var num = document.querySelector('#num');
+            var bt = document.getElementById('bt');
+            var tt = document.getElementById('tt');
+            var num = document.getElementById('num');
             bt.addEventListener('click',say);
           
             function say(){
@@ -577,9 +577,9 @@
             &lt;/body&gt;
             &lt;script&gt;
             var keta = 10;
-            var bt = document.querySelector('#bt');
-            var tt = document.querySelector('#tt');
-            var num = document.querySelector('#num');
+            var bt = document.getElementById('bt');
+            var tt = document.getElementById('tt');
+            var num = document.getElementById('num');
             bt.addEventListener('click',say);
           
             function say(){
@@ -617,9 +617,9 @@
             &lt;/body&gt;
             &lt;script&gt;
             var keta = 10;
-            var bt = document.querySelector('#bt');
-            var tt = document.querySelector('#tt');
-            var num = document.querySelector('#num');
+            var bt = document.getElementById('bt');
+            var tt = document.getElementById('tt');
+            var num = document.getElementById('num');
           
             bt.addEventListener('click',say);
             tt.addEventListener('click',numkesu);
@@ -663,9 +663,9 @@
             &lt;/body&gt;
             &lt;script&gt;
             var keta = 10;
-            var bt = document.querySelector('#bt');
-            var tt = document.querySelector('#tt');
-            var num = document.querySelector('#num');
+            var bt = document.getElementById('bt');
+            var tt = document.getElementById('tt');
+            var num = document.getElementById('num');
             var kotae = "";                              /*この行を追加*/
           
             bt.addEventListener('click',say);
