@@ -1,5 +1,5 @@
-jsseminartext.firebaseapp.com
-
+https://jsseminartext.firebaseapp.com
+https://jsseminartext.firebaseapp.com/indexGame.html
 
 変更予定
 ・問題は隠す
