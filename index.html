@@ -63,9 +63,9 @@
       border: double 5px #aaa;
     }
 
-    /* .blind{
+    .blind{
        display:none; 
-    } */
+    }
 
   </style>
 
@@ -131,12 +131,13 @@
 <!---   2回目以降はvarがいらない説明--->
 
 
-  <div class="obj">
+  <div class="obj" >
       【問題】//〜処理〜と書いてあるところに下にあるコードから必要なものを選んで完成させてください。<br />
       hideo<br />
       masao<br />
       と表示できれば完成です。(03.html)<br />      
-    <span class="blind">
+      <p class="copy" id="qb3" onClick="dispQ('#qb3','#q3');">問題を表示</p>
+      <span class="blind" id="q3">
       <pre class="prettyprint" id="src3">
       &lt;html&gt; 
           &lt;script&gt; 
@@ -174,7 +175,9 @@
         41<br />
         12<br />
       </div>
-      と表示できれば完成です。(04.html)<br />      
+      と表示できれば完成です。(04.html)<br />
+      <p class="copy" id="qb4" onClick="dispQ('#qb4','#q4');">問題を表示</p>
+      <span class="blind" id="q4">  
     <pre class="prettyprint" id="src4">
     &lt;html&gt; 
         &lt;script&gt; 
@@ -191,6 +194,7 @@
     &lt;/html&gt; 
     </pre>
     <p class="copy" id="copy4">選択</p>
+    </span>
   </div>
 
   <hr />
@@ -212,6 +216,8 @@
   </div>
   <div class="obj">
     【問題】繰り返しの条件を書いてみましょう。(06.html)
+    <p class="copy" id="qb6" onClick="dispQ('#qb6','#q6');">問題を表示</p>
+    <span class="blind" id="q6">
     <pre class="prettyprint" id="src6">
     &lt;html&gt; 
       &lt;script&gt; 
@@ -230,10 +236,13 @@
     ③2・4・6・8を表示してみよう!<br />
     ④20~1を表示してみよう！<br />
     </div>
+    </span>
   </div>
 
   <div class="obj">
     【問題】下にあるコードを使ってhideoとmasaoを交互に表示してみましょう(07.html)
+    <p class="copy" id="qb7" onClick="dispQ('#qb7','#q7');">問題を表示</p>
+    <span class="blind" id="q7">
     <pre class="prettyprint" id="src7">
     &lt;html&gt; 
       &lt;script&gt; 
@@ -263,7 +272,8 @@
         var text3 = text3;<br />
         text1 = "masao";<br />
         text2 = "hideo";<br />
-        </div>
+    </div>
+    </span>
   </div>
 
   <hr />
@@ -302,6 +312,8 @@
   <div class="obj">
       【問題】ループと分岐を使って5と６の間にーを表示しよう(10.html)<br />
       [処理]に条件式を選び表示例のように出力しよう
+      <p class="copy" id="qb10" onClick="dispQ('#qb10','#q10');">問題を表示</p>
+      <span class="blind" id="q10">
     <pre class="prettyprint" id="src10">
     &lt;html&gt; 
       &lt;script&gt; 
@@ -343,6 +355,7 @@
       8<br />
       9<br />
     </div>
+    </span>
   </div>
 
 
@@ -393,6 +406,8 @@
   <div class="obj">
     【問題】10より大きい数字を判定する関数を作ってみましょう<br />
     10より大きい数字を入れると「10より大きい」とlogを出しましょう.(13.html)
+    <p class="copy" id="qb120" onClick="dispQ('#qb120','#q120');">問題を表示</p>
+    <span class="blind" id="q120">
     <pre class="prettyprint" id="src120">
     &lt;html&gt; 
       &lt;script&gt; 
@@ -406,11 +421,14 @@
     &lt;/html&gt; 
     </pre>
     <p class="copy" id="copy120">選択</p>
+    </span>
   </div>
 
 
   <div class="obj">
     【問題】値を返す関数を作ってみよう(14.html)
+    <p class="copy" id="qb13" onClick="dispQ('#qb13','#q13');">問題を表示</p>
+    <span class="blind" id="q13">
     <pre class="prettyprint" id="src13">
     &lt;html&gt; 
       &lt;script&gt; 
@@ -430,11 +448,14 @@
     &lt;/html&gt; 
     </pre>
     <p class="copy" id="copy13">選択</p>
+    </span>
   </div>
 
 
   <div class="obj">
     【問題】関数に関数を渡す。(15.html)
+    <p class="copy" id="qb14" onClick="dispQ('#qb14','#q14');">問題を表示</p>
+    <span class="blind" id="q14">
     <pre class="prettyprint" id="src14">
     &lt;html&gt; 
       &lt;script&gt; 
@@ -455,6 +476,7 @@
     &lt;/html&gt; 
     </pre>
     <p class="copy" id="copy14">選択</p>
+    </span>
   </div>
 
   <hr />
@@ -494,7 +516,9 @@
   </div>
 
   <div class="obj">
-    【問題】id以外を使って画面情報の一部を取得する。(18.html)<br />      
+    【問題】id以外を使って画面情報の一部を取得する。(18.html)<br />    
+    <p class="copy" id="qb18" onClick="dispQ('#qb18','#q18');">問題を表示</p>
+    <span class="blind" id="q18">  
     <pre class="prettyprint" id="src160">
     &lt;html&gt; 
       &lt;body&gt;
@@ -530,6 +554,7 @@
     ※タグにIDを追加すること<br />
     ※h1タグの文字情報の場所を確認すること<br />
     <p class="copy" id="copy160">選択</p>
+    </span>
   </div>
 
 
@@ -724,6 +749,11 @@
         var range = document.createRange();
         range.selectNode(obj.querySelector('pre'));
         s.addRange(range);    
+    }
+
+    function dispQ(addSelector,removeSelector){
+      document.querySelector(removeSelector).classList.remove('blind');
+      document.querySelector(addSelector).classList.add('blind');
     }
 
     (()=>{
