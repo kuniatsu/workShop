@@ -11,5 +11,5 @@ https://kuniatsu.github.io/workShop/indexGame.html
 ・画像で伝わるように変更  
 ・firebase→GitHubPages  
 ~~・querySelectorの廃止~~
-
+・offLine対応srcの枠がなくなる
 
