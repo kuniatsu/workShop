@@ -64,9 +64,8 @@
     }
 
     .blind{
-       /* display:none; 
-        */
-        visibility:hidden
+       display:none;
+        /* visibility:hidden; */
     }
 
   </style>
@@ -550,8 +549,6 @@
         &lt;/script&gt; 
     &lt;/html&gt; 
     </pre>
-    ※タグにIDを追加すること<br />
-    ※h1タグの文字情報の場所を確認すること<br />
     <p class="copy" id="copy160">選択</p>
     </span>
   </div>
@@ -759,9 +756,9 @@
         let objArray = document.querySelectorAll('.obj');
         for(let obj of objArray){
           let copy = obj.querySelector('p');
-          copy.addEventListener('click',()=>{
-                console.log(copy.id);
-                select(obj);
+            copy.addEventListener('click',()=>{
+              console.log(copy.id);
+              select(obj);
             });
         }
 
