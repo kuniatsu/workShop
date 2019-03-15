@@ -115,7 +115,7 @@
   </div>
 
   <div class="obj">
-    メッセージを出す(01.html)
+    メッセージを出す
     <pre class="prettyprint" id="src1">
       &lt;html&gt; 
         &lt;head style="text-align: center;"&gt;
@@ -140,7 +140,7 @@
   <hr>
   <h2>プログラムを書いてみよう</h2>
   <div class="obj">
-    メッセージを出す(01.html)
+    メッセージを出す
     <pre class="prettyprint" id="src1">
     &lt;html&gt; 
         &lt;script&gt; 
@@ -155,7 +155,7 @@
 
 
   <div class="obj">
-    変数を使う(02.html)
+    変数を使う
     <pre class="prettyprint" id="src2">
     &lt;html&gt; 
       &lt;script&gt; 
@@ -168,7 +168,7 @@
   </div>
 
   <div class="obj">
-    変数を使う(02.html)
+    変数を使う2
     <pre class="prettyprint" id="src2_1">
     &lt;html&gt; 
       &lt;script&gt; 
@@ -178,17 +178,34 @@
       &lt;/script&gt; 
     &lt;/html&gt; 
     </pre>
-    <p class="copy" id="copy2">選択</p>
+    <p class="copy" id="copy2_1">選択</p>
+  </div>
+
+  <div class="obj">
+    変数を使う3
+    <pre class="prettyprint" id="src2_2">
+    &lt;html&gt; 
+      &lt;script&gt; 
+        var num1 = 1;
+        var num2 = num1 + 1;
+        var num3 = num1 + num2;
+        console.dir(num1);
+        console.dir(num2);
+        console.dir(num3);
+      &lt;/script&gt; 
+    &lt;/html&gt; 
+    </pre>
+    <p class="copy" id="copy2_2">選択</p>
   </div>
 
 
 
 
   <div class="obj" >
-      【問題】//〜処理〜と書いてあるところに下にあるコードから必要なものを選んで完成させてください。<br />
+      【CHALLENGE】//〜処理〜と書いてあるところに下にあるコードを使い完成させてください。<br />
       hideo<br />
       masao<br />
-      と表示できれば完成です。(03.html)<br />      
+      と表示できれば完成です。<br />      
       <p class="challenge" id="qb3" onClick="dispQ('#qb3','#q3');">問題を表示</p>
       <span class="blind" id="q3">
       <pre class="prettyprint" id="src3">
@@ -221,14 +238,14 @@
   </div>
 
   <div class="obj">
-      【問題】[処理]と書いてあるところに４つの変数を使いコード書いて完成させてください。<br />
+      【CHALLENGE】[処理]と書いてあるところに４つの変数を使いコード書いて完成させてください。<br />
       <div class="ans">
         3<br />
         54<br />
         41<br />
         12<br />
       </div>
-      と表示できれば完成です。(04.html)<br />
+      と表示できれば完成です。<br />
       <p class="challenge" id="qb4" onClick="dispQ('#qb4','#q4');">問題を表示</p>
       <span class="blind" id="q4">  
     <pre class="prettyprint" id="src4">
@@ -253,7 +270,7 @@
   <hr />
   <h2>繰り返し処理をしよう</h2>
   <div class="obj">
-    繰り返しの処理を書いてみましょう。(05.html)
+    繰り返しの処理を書いてみましょう。
     <pre class="prettyprint" id="src5">
     &lt;html&gt; 
       &lt;script&gt; 
@@ -268,7 +285,7 @@
     <p class="copy" id="copy5">選択</p>
   </div>
   <div class="obj">
-    【問題】繰り返しの条件を書いてみましょう。(06.html)
+    【CHALLENGE】繰り返しの条件を書いてみましょう。
     <p class="challenge" id="qb6" onClick="dispQ('#qb6','#q6');">問題を表示</p>
     <span class="blind" id="q6">
     <pre class="prettyprint" id="src6">
@@ -293,7 +310,7 @@
   </div>
 
   <div class="obj">
-    【問題】下にあるコードを使ってhideoとmasaoを交互に表示してみましょう(07.html)
+    【CHALLENGE】下にあるコードを使ってhideoとmasaoを交互に表示してみましょう
     <p class="challenge" id="qb7" onClick="dispQ('#qb7','#q7');">問題を表示</p>
     <span class="blind" id="q7">
     <pre class="prettyprint" id="src7">
@@ -332,7 +349,7 @@
   <hr />
   <h2>条件分岐処理をしよう</h2>
   <div class="obj">
-      条件が分岐する処理を書いてみましょう。(08.html)
+      条件が分岐する処理を書いてみましょう。
     <pre class="prettyprint" id="src8">
     &lt;html&gt; 
       &lt;script&gt; 
@@ -347,7 +364,7 @@
   </div>
 
   <div class="obj">
-      elseを使って２分岐する(09.html)
+      elseを使って２分岐する
     <pre class="prettyprint" id="src9">
     &lt;html&gt; 
       &lt;script&gt; 
@@ -363,7 +380,7 @@
     <p class="copy" id="copy9">選択</p>
   </div>
   <div class="obj">
-      【問題】ループと分岐を使って5と６の間にーを表示しよう(10.html)<br />
+      【CHALLENGE】ループと分岐を使って5と６の間にーを表示しよう<br />
       [処理]に条件式を選び表示例のように出力しよう
       <p class="challenge" id="qb10" onClick="dispQ('#qb10','#q10');">問題を表示</p>
       <span class="blind" id="q10">
@@ -415,7 +432,7 @@
   <hr />
   <h2>関数を作る</h2>
   <div class="obj">
-    ソースを部品化する。(11.html)
+    ソースを部品化する。
     <pre class="prettyprint" id="src11">
     &lt;html&gt; 
       &lt;script&gt; 
@@ -436,7 +453,7 @@
   </div>
 
   <div class="obj">
-      引数を使って関数の中に値を渡す(12.html)
+      引数を使って関数の中に値を渡す
     <pre class="prettyprint" id="src12">
     &lt;html&gt; 
       &lt;script&gt; 
@@ -457,8 +474,8 @@
   </div>
 
   <div class="obj">
-    【問題】10より大きい数字を判定する関数を作ってみましょう<br />
-    10より大きい数字を入れると「10より大きい」とlogを出しましょう.(13.html)
+    【CHALLENGE】10より大きい数字を判定する関数を作ってみましょう<br />
+    10より大きい数字を入れると「10より大きい」とlogを出しましょう
     <p class="challenge" id="qb120" onClick="dispQ('#qb120','#q120');">問題を表示</p>
     <span class="blind" id="q120">
     <pre class="prettyprint" id="src120">
@@ -479,7 +496,7 @@
 
 
   <div class="obj">
-    【問題】値を返す関数を作ってみよう(14.html)
+    【CHALLENGE】値を返す関数を作ってみよう
     <p class="challenge" id="qb13" onClick="dispQ('#qb13','#q13');">問題を表示</p>
     <span class="blind" id="q13">
     <pre class="prettyprint" id="src13">
@@ -506,7 +523,7 @@
 
 
   <div class="obj">
-    【問題】関数に関数を渡す。(15.html)
+    【CHALLENGE】関数に関数を渡す。
     <p class="challenge" id="qb14" onClick="dispQ('#qb14','#q14');">問題を表示</p>
     <span class="blind" id="q14">
     <pre class="prettyprint" id="src14">
@@ -536,7 +553,7 @@
   <h2>画面に出力しよう</h2>
   <div class="obj">
       画面情報を取得する。<br />
-      ※scriptタグの位置をbodyの下に変更(16.html)<br />      
+      ※scriptタグの位置をbodyの下に変更<br />      
     <pre class="prettyprint" id="src15">
     &lt;html&gt; 
       &lt;body&gt;
@@ -551,7 +568,7 @@
   </div>
 
   <div class="obj">
-      画面情報の一部を取得する。(17.html)<br />      
+      画面情報の一部を取得する。<br />      
     <pre class="prettyprint" id="src16">
     &lt;html&gt; 
       &lt;body&gt;
@@ -569,7 +586,7 @@
   </div>
 
   <div class="obj">
-    【問題】id以外を使って画面情報の一部を取得する。(18.html)<br />    
+    【CHALLENGE】id以外を使って画面情報の一部を取得する。<br />    
     <p class="challenge" id="qb18" onClick="dispQ('#qb18','#q18');">問題を表示</p>
     <span class="blind" id="q18">  
     <pre class="prettyprint" id="src160">
@@ -613,7 +630,7 @@
 
 
   <div class="obj">
-    画面の情報を変更する(19.html)<br />      
+    画面の情報を変更する<br />      
     <pre class="prettyprint" id="src17">
     &lt;html&gt; 
       &lt;body&gt;
@@ -629,7 +646,7 @@
   </div>
 
   <div class="obj">
-    テキストボックスとボタンを作る(20.html)<br />      
+    テキストボックスとボタンを作る<br />      
     <pre class="prettyprint" id="src18">
     &lt;html&gt; 
       &lt;body&gt;
@@ -642,7 +659,7 @@
   </div>
 
   <div class="obj">
-    ボタンをクリックされた時のイベントを割り当てる(21.html)<br />      
+    ボタンをクリックされた時のイベントを割り当てる<br />      
     <pre class="prettyprint" id="src19">
       &lt;html&gt; 
       &lt;body&gt;
@@ -662,7 +679,7 @@
   </div>
   
   <div class="obj">
-      テキストを取得する(22.html)<br />      
+      テキストを取得する<br />      
     <pre class="prettyprint" id="src20">
       &lt;html&gt; 
         &lt;body&gt;
@@ -683,7 +700,7 @@
   </div>
   
   <div class="obj">
-    取得したテキストを出力する(23.html)<br />      
+    取得したテキストを出力する<br />      
     <pre class="prettyprint" id="src21">
       &lt;html&gt; 
         &lt;body&gt;
@@ -708,7 +725,7 @@
   <hr />
   <h2>時間差で処理を実行しよう</h2>
   <div class="obj">
-      時間差処理なしパターン(24.html)<br />      
+      時間差処理なしパターン<br />      
       <pre class="prettyprint" id="src22">
         &lt;html&gt; 
           &lt;script&gt;
@@ -725,7 +742,7 @@
     </div>
   
     <div class="obj">
-      時間差処理なしパターン(25.html)<br />      
+      時間差処理なしパターン<br />      
       <pre class="prettyprint" id="src23">
         &lt;html&gt; 
           &lt;script&gt;
@@ -743,7 +760,7 @@
 
     <h2>乱数を使う</h2>
     <div class="obj">
-        乱数を表示する(26.html)<br />      
+        乱数を表示する<br />      
       <pre class="prettyprint" id="src24">
         &lt;html&gt; 
           &lt;script&gt;
@@ -756,7 +773,7 @@
     </div>
 
     <div class="obj">
-      整数の乱数を作ろう(27.html)<br />      
+      整数の乱数を作ろう<br />      
       <pre class="prettyprint" id="src25">
         &lt;html&gt; 
           &lt;script&gt;
@@ -773,7 +790,7 @@
     </div>
 
     <div class="obj">
-      整数の乱数を作る関数を作ろう(28.html)<br />      
+      整数の乱数を作る関数を作ろう<br />      
       <pre class="prettyprint" id="src26">
         &lt;html&gt; 
           &lt;script&gt;
