@@ -473,32 +473,30 @@
     <p class="copy" id="copy12">選択</p>
   </div>
 
-  <div class="obj">
-    【CHALLENGE】10より大きい数字を判定する関数を作ってみましょう<br />
-    10より大きい数字を入れると「10より大きい」とlogを出しましょう
-    <p class="challenge" id="qb120" onClick="dispQ('#qb120','#q120');">問題を表示</p>
-    <span class="blind" id="q120">
-    <pre class="prettyprint" id="src120">
-    &lt;html&gt; 
-      &lt;script&gt; 
-      kurikaeshi(9);
-      kurikaeshi(11);
 
-      function kurikaeshi(num){
-        [処理]        
-      }      
-      &lt;/script&gt; 
-    &lt;/html&gt; 
+
+  <div class="obj">
+    数字を判断する
+    <pre class="prettyprint" id="src120">
+      &lt;html&gt; 
+        &lt;script&gt; 
+        kurikaeshi(9);
+        kurikaeshi(11);
+
+        function kurikaeshi(num){
+          if(num > 10){
+            console.log("10〜");
+          }    
+        }      
+        &lt;/script&gt; 
+      &lt;/html&gt; 
     </pre>
     <p class="copy" id="copy120">選択</p>
-    </span>
   </div>
 
 
   <div class="obj">
-    【CHALLENGE】値を返す関数を作ってみよう
-    <p class="challenge" id="qb13" onClick="dispQ('#qb13','#q13');">問題を表示</p>
-    <span class="blind" id="q13">
+    値を返す関数を作ってみよう
     <pre class="prettyprint" id="src13">
     &lt;html&gt; 
       &lt;script&gt; 
@@ -512,25 +510,22 @@
       }      
 
       function ichihiku(num){
-        [処理]
+        return num - 1;
       }      
       &lt;/script&gt; 
     &lt;/html&gt; 
     </pre>
     <p class="copy" id="copy13">選択</p>
-    </span>
   </div>
 
 
   <div class="obj">
-    【CHALLENGE】関数に関数を渡す。
-    <p class="challenge" id="qb14" onClick="dispQ('#qb14','#q14');">問題を表示</p>
-    <span class="blind" id="q14">
+    関数に関数を渡す。
     <pre class="prettyprint" id="src14">
     &lt;html&gt; 
       &lt;script&gt; 
       console.log(methodReturn());//hideoを表示
-      method([処理]);//masaoと表示させる
+      method(methodArgs());//masaoと表示させる
 
       function methodArgs(){
         return "masao";
@@ -546,266 +541,7 @@
     &lt;/html&gt; 
     </pre>
     <p class="copy" id="copy14">選択</p>
-    </span>
   </div>
-
-  <hr />
-  <h2>画面に出力しよう</h2>
-  <div class="obj">
-      画面情報を取得する。<br />
-      ※scriptタグの位置をbodyの下に変更<br />      
-    <pre class="prettyprint" id="src15">
-    &lt;html&gt; 
-      &lt;body&gt;
-        &lt;h1&gt;タイトル&lt;/h1&gt;
-      &lt;/body&gt;
-      &lt;script&gt; 
-        console.dir(document);
-      &lt;/script&gt; 
-    &lt;/html&gt; 
-    </pre>
-    <p class="copy" id="copy15">選択</p>
-  </div>
-
-  <div class="obj">
-      画面情報の一部を取得する。<br />      
-    <pre class="prettyprint" id="src16">
-    &lt;html&gt; 
-      &lt;body&gt;
-        &lt;h1 id="title"&gt;タイトル&lt;/h1&gt;
-      &lt;/body&gt;
-      &lt;script&gt;
-        var a = document.getElementById('title'); 
-        console.dir(a);
-      &lt;/script&gt; 
-    &lt;/html&gt; 
-    </pre>
-    ※タグにIDを追加すること<br />
-    ※h1タグの文字情報の場所を確認すること<br />
-    <p class="copy" id="copy16">選択</p>
-  </div>
-
-  <div class="obj">
-    【CHALLENGE】id以外を使って画面情報の一部を取得する。<br />    
-    <p class="challenge" id="qb18" onClick="dispQ('#qb18','#q18');">問題を表示</p>
-    <span class="blind" id="q18">  
-    <pre class="prettyprint" id="src160">
-    &lt;html&gt; 
-      &lt;body&gt;
-        &lt;h1  id="title1"&gt;タイトル1&lt;/h1&gt;
-        &lt;h2 class="title2"&gt;タイトル2&lt;/h2&gt;
-        &lt;h2 class="title3" &gt;タイトル3&lt;/h2&gt;
-        &lt;h3 &gt;タイトル4&lt;/h3&gt;
-        &lt;h4 &gt;タイトル5&lt;/h4&gt;
-      &lt;/body&gt;
-      &lt;script&gt;
-        //getElementByIdでIDを指定して取得
-        var title1 = document.getElementById('title1'); 
-        console.dir(title1);//タイトル1
-
-        //getElementsByClassNameでclassを指定して取得
-        var title2 = document.getElementsByClassName('title2'); 
-        console.dir(title2);//タイトル2
-
-        //getElementsByClassNameでclassを指定して取得
-        [処理]
-        console.dir(title3);//タイトル3
-
-        //getElementsByTagNameでタグ名を指定して取得
-        var title4 = document.getElementsByTagName('h3'); 
-        console.dir(title4);//タイトル4
-
-        //getElementsByTagNameでタグ名を指定して取得
-        [処理]
-        console.dir(title5);//タイトル5        
-        &lt;/script&gt; 
-    &lt;/html&gt; 
-    </pre>
-    <p class="copy" id="copy160">選択</p>
-    </span>
-  </div>
-
-
-
-
-
-  <div class="obj">
-    画面の情報を変更する<br />      
-    <pre class="prettyprint" id="src17">
-    &lt;html&gt; 
-      &lt;body&gt;
-        &lt;h1 id="title"&gt;タイトル&lt;/h1&gt;
-      &lt;/body&gt;
-      &lt;script&gt;
-        var a = document.getElementById('title');
-        a.innerText = "まさお";
-      &lt;/script&gt; 
-    &lt;/html&gt; 
-    </pre>
-    <p class="copy" id="copy17">選択</p>
-  </div>
-
-  <div class="obj">
-    テキストボックスとボタンを作る<br />      
-    <pre class="prettyprint" id="src18">
-    &lt;html&gt; 
-      &lt;body&gt;
-        &lt;input type="text" id="tb"&gt;
-        &lt;button id="bt"&gt; 押せ！&lt;/button&gt;    
-      &lt;/body&gt;
-    &lt;/html&gt; 
-    </pre>
-    <p class="copy" id="copy18">選択</p>
-  </div>
-
-  <div class="obj">
-    ボタンをクリックされた時のイベントを割り当てる<br />      
-    <pre class="prettyprint" id="src19">
-      &lt;html&gt; 
-      &lt;body&gt;
-        &lt;input type="text" id="tb"&gt;
-        &lt;button id="bt"&gt; 押せ！&lt;/button&gt;    
-      &lt;/body&gt;
-        &lt;script&gt;
-        function test(){
-          console.dir('clickされたよ！');
-        }        
-        var bt = document.getElementById('bt');
-        bt.addEventListener('click',test);
-        &lt;/script&gt; 
-      &lt;/html&gt; 
-    </pre>
-    <p class="copy" id="copy19">選択</p>
-  </div>
-  
-  <div class="obj">
-      テキストを取得する<br />      
-    <pre class="prettyprint" id="src20">
-      &lt;html&gt; 
-        &lt;body&gt;
-          &lt;input type="text" id="tb" value="masao"&gt;
-          &lt;button id="bt"&gt;押せ！&lt;/button&gt;    
-        &lt;/body&gt;
-        &lt;script&gt;
-        function test(){
-          var tb = document.getElementById('tb');
-          console.dir(tb);
-        }      
-        var bt = document.getElementById('bt');
-        bt.addEventListener('click',test);
-        &lt;/script&gt; 
-      &lt;/html&gt; 
-    </pre>
-    <p class="copy" id="copy20">選択</p>
-  </div>
-  
-  <div class="obj">
-    取得したテキストを出力する<br />      
-    <pre class="prettyprint" id="src21">
-      &lt;html&gt; 
-        &lt;body&gt;
-        &lt;input type="text" id="tb" value="masao"&gt;
-        &lt;button id="bt"&gt;押せ！&lt;/button&gt;
-        &lt;p id="output"&gt;未入力&lt;/p&gt;  
-        &lt;/body&gt;
-        &lt;script&gt;
-        function test(){
-          var tb = document.getElementById('tb');
-          var p = document.getElementById('output');
-          p.innerText = tb.value;
-        }
-        var bt = document.getElementById('bt');
-        bt.addEventListener('click',test);   
-        &lt;/script&gt; 
-      &lt;/html&gt; 
-    </pre>
-    <p class="copy" id="copy21">選択</p>
-  </div>
-
-  <hr />
-  <h2>時間差で処理を実行しよう</h2>
-  <div class="obj">
-      時間差処理なしパターン<br />      
-      <pre class="prettyprint" id="src22">
-        &lt;html&gt; 
-          &lt;script&gt;
-          function log(){
-            console.dir(2);
-          }
-          console.dir(1);
-          log(2);
-          console.dir(3);
-          &lt;/script&gt; 
-        &lt;/html&gt; 
-      </pre>
-      <p class="copy" id="copy22">選択</p>
-    </div>
-  
-    <div class="obj">
-      時間差処理なしパターン<br />      
-      <pre class="prettyprint" id="src23">
-        &lt;html&gt; 
-          &lt;script&gt;
-          function log(){
-            console.log(2);
-          }
-          console.log(1);
-          setTimeout(log,1000);
-          console.log(3);
-          &lt;/script&gt; 
-        &lt;/html&gt; 
-      </pre>
-      <p class="copy" id="copy23">選択</p>
-    </div>
-
-    <h2>乱数を使う</h2>
-    <div class="obj">
-        乱数を表示する<br />      
-      <pre class="prettyprint" id="src24">
-        &lt;html&gt; 
-          &lt;script&gt;
-          var num = Math.random();
-          console.log(num);       
-          &lt;/script&gt; 
-        &lt;/html&gt; 
-      </pre>
-      <p class="copy" id="copy24">選択</p>
-    </div>
-
-    <div class="obj">
-      整数の乱数を作ろう<br />      
-      <pre class="prettyprint" id="src25">
-        &lt;html&gt; 
-          &lt;script&gt;
-          var num = Math.random();
-          console.log(num);
-          var num2 = Math.floor(num);
-          console.log(num2);
-          var num3 = Math.floor(num*10);
-          console.log(num3);             
-          &lt;/script&gt; 
-        &lt;/html&gt; 
-      </pre>
-      <p class="copy" id="copy25">選択</p>
-    </div>
-
-    <div class="obj">
-      整数の乱数を作る関数を作ろう<br />      
-      <pre class="prettyprint" id="src26">
-        &lt;html&gt; 
-          &lt;script&gt;
-          function ransuu(mul){
-            var num = Math.random();
-            var num3 = Math.floor(num*mul);
-            return num3;
-          }
-          var ran = ransuu(100);
-          console.dir(ran);                 
-          &lt;/script&gt; 
-        &lt;/html&gt; 
-      </pre>
-      <p class="copy" id="copy26">選択</p>
-    </div>
 
 
 
