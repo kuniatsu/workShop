@@ -25,13 +25,15 @@
         width:30%;
         text-align: center;
     }
-
+    .arrange > img{
+        width:30%;
+    }
     div{
         width:100%;
     }
 
     .attentionWord{
-        font-size: 300%;
+        /* font-size: 300%; */
         font-weight: bold;
         text-align: center;
     }
@@ -56,6 +58,11 @@
         border:groove 3px #000;
     }
 
+    .challenge{
+        text-align: center;
+        background-color: #77e;
+        border:groove 3px #000;
+    }
     .select{
       border: dashed 2px #000;
     }
@@ -101,7 +108,7 @@
   <hr>
   <h2>プログラムを書いてみよう</h2>
   <div class="obj">
-    メッセージを出す(01.html)
+    メッセージを出す
     <pre class="prettyprint" id="src1">
     &lt;html&gt; 
         &lt;script&gt; 
@@ -114,7 +121,7 @@
   </div>
 
   <div class="obj">
-    変数を使う(02.html)
+    変数を使う
     <pre class="prettyprint" id="src2">
     &lt;html&gt; 
       &lt;script&gt; 
@@ -126,15 +133,43 @@
     <p class="copy" id="copy2">選択</p>
   </div>
 
-<!---   2回目以降はvarがいらない説明--->
+  <div class="obj">
+    変数を使う2
+    <pre class="prettyprint" id="src2_1">
+    &lt;html&gt; 
+      &lt;script&gt; 
+        var text = "masao";
+        text = "hideo";
+        console.dir(text);
+      &lt;/script&gt; 
+    &lt;/html&gt; 
+    </pre>
+    <p class="copy" id="copy2_1">選択</p>
+  </div>
 
+  <div class="obj">
+    変数を使う3
+    <pre class="prettyprint" id="src2_2">
+    &lt;html&gt; 
+      &lt;script&gt; 
+        var num1 = 1;
+        var num2 = num1 + 1;
+        var num3 = num1 + num2;
+        console.dir(num1);
+        console.dir(num2);
+        console.dir(num3);
+      &lt;/script&gt; 
+    &lt;/html&gt; 
+    </pre>
+    <p class="copy" id="copy2_2">選択</p>
+  </div>
 
   <div class="obj" >
       【問題】//〜処理〜と書いてあるところに下にあるコードから必要なものを選んで完成させてください。<br />
       hideo<br />
       masao<br />
-      と表示できれば完成です。(03.html)<br />      
-      <p class="copy" id="qb3" onClick="dispQ('#qb3','#q3');">問題を表示</p>
+      と表示できれば完成です。<br />      
+      <p class="challenge" id="qb3" onClick="dispQ('#qb3','#q3');">問題を表示</p>
       <span class="blind" id="q3">
       <pre class="prettyprint" id="src3">
       &lt;html&gt; 
@@ -173,8 +208,8 @@
         41<br />
         12<br />
       </div>
-      と表示できれば完成です。(04.html)<br />
-      <p class="copy" id="qb4" onClick="dispQ('#qb4','#q4');">問題を表示</p>
+      と表示できれば完成です。<br />
+      <p class="challenge" id="qb4" onClick="dispQ('#qb4','#q4');">問題を表示</p>
       <span class="blind" id="q4">  
     <pre class="prettyprint" id="src4">
     &lt;html&gt; 
@@ -198,7 +233,7 @@
   <hr />
   <h2>繰り返し処理をしよう</h2>
   <div class="obj">
-    繰り返しの処理を書いてみましょう。(05.html)
+    繰り返しの処理を書いてみましょう。
     <pre class="prettyprint" id="src5">
     &lt;html&gt; 
       &lt;script&gt; 
@@ -213,8 +248,8 @@
     <p class="copy" id="copy5">選択</p>
   </div>
   <div class="obj">
-    【問題】繰り返しの条件を書いてみましょう。(06.html)
-    <p class="copy" id="qb6" onClick="dispQ('#qb6','#q6');">問題を表示</p>
+    【問題】繰り返しの条件を書いてみましょう。
+    <p class="challenge" id="qb6" onClick="dispQ('#qb6','#q6');">問題を表示</p>
     <span class="blind" id="q6">
     <pre class="prettyprint" id="src6">
     &lt;html&gt; 
@@ -239,7 +274,7 @@
 
   <div class="obj">
     【問題】下にあるコードを使ってhideoとmasaoを交互に表示してみましょう(07.html)
-    <p class="copy" id="qb7" onClick="dispQ('#qb7','#q7');">問題を表示</p>
+    <p class="challenge" id="qb7" onClick="dispQ('#qb7','#q7');">問題を表示</p>
     <span class="blind" id="q7">
     <pre class="prettyprint" id="src7">
     &lt;html&gt; 
@@ -755,7 +790,7 @@
     (()=>{
         let objArray = document.querySelectorAll('.obj');
         for(let obj of objArray){
-          let copy = obj.querySelector('p');
+          let copy = obj.querySelector('.copy');
             copy.addEventListener('click',()=>{
               console.log(copy.id);
               select(obj);
