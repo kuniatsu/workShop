@@ -434,7 +434,7 @@
     <p class="challenge" id="qb14" onClick="dispQ('#qb14','#q14');">問題を表示</p>
     <span class="blind" id="q14">
     <pre class="prettyprint" id="src14">
-      console.log(methodReturn());//hideoを表示
+      console.dir(methodReturn());//hideoを表示
       method([処理]);//masaoと表示させる
 
       function methodArgs(){
@@ -445,7 +445,7 @@
       }
       function method(callback){
         var name = callback();
-        console.log(name);
+        console.dir(name);
       }
       console.dir("-----END-----");
     </pre>
