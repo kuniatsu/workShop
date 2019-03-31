@@ -1,6 +1,6 @@
 <html>
 <head>
-  <title>js講座テキスト 19/03/31</title>
+  <title>js講座テキスト 19/03/30</title>
   <style>
     body{
         margin-left:20%;
@@ -28,6 +28,8 @@
     .arrange > img{
         width:30%;
     }
+    
+
     div{
         width:100%;
     }
@@ -36,6 +38,7 @@
         /* font-size: 300%; */
         font-weight: bold;
         text-align: center;
+        /* width:30%; */
     }
 
     hr{
@@ -63,6 +66,10 @@
         background-color: #77e;
         border:groove 3px #000;
     }
+
+
+
+
     .select{
       border: dashed 2px #000;
     }
@@ -80,441 +87,166 @@
   <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
 </head>
 <body>
-  <h2>00.推奨環境</h2>
-  <div class="container">
-    <p>URL：https://kuniatsu.github.io/workShop/index.html</p>
-    <p>ファイル：https://github.com/kuniatsu/workShop</p>        
-    <p>エディッタ：サクラエディッタ・terapad・VisualStudioCode</p>
-    <p>ブラウザ：chrome</p>
-  </div>
-  <hr>
-  <h2>01.webの仕組みを知ろう！</h2>
-  <!----文字が２段になる死ぬほどダサい-->
-  <div class="container01">
-    <div class="arrange">
-      <img id="htmlImage" src="">
-      <p class="attentionWord">表示内容</p>
-    </div>
-    <div class="arrange">
-      <img id="cssImage" src=>
-      <p class="attentionWord">デザイン</p>
-    </div>
-    <div class="arrange">
-        <img id="jsImage" src=>
-      <p class="attentionWord">動き</p>    
-    </div>
-    <div style="clear: both;"></div>
-  </div>
-  <hr>
-  <h2>プログラムを書いてみよう</h2>
+ <h2>画面に出力しよう</h2>
   <div class="obj">
-    メッセージを出す
-    <pre class="prettyprint" id="src1">
+      画面情報を取得する。<br />
+      ※scriptタグの位置をbodyの下に変更<br />      
+    <pre class="prettyprint" id="src15">
     &lt;html&gt; 
-        &lt;script&gt; 
-            console.dir("masao"); 
+      &lt;body&gt;
+        &lt;h1&gt;タイトル&lt;/h1&gt;
+      &lt;/body&gt;
+      &lt;script&gt; 
+        console.dir(document);
+      &lt;/script&gt; 
+    &lt;/html&gt; 
+    </pre>
+    <p class="copy" id="copy15">選択</p>
+  </div>
+
+  <div class="obj">
+      画面情報の一部を取得する。<br />      
+    <pre class="prettyprint" id="src16">
+    &lt;html&gt; 
+      &lt;body&gt;
+        &lt;h1 id="title"&gt;タイトル&lt;/h1&gt;
+      &lt;/body&gt;
+      &lt;script&gt;
+        var a = document.getElementById('title'); 
+        console.dir(a);
+      &lt;/script&gt; 
+    &lt;/html&gt; 
+    </pre>
+    ※タグにIDを追加すること<br />
+    ※h1タグの文字情報の場所を確認すること<br />
+    <p class="copy" id="copy16">選択</p>
+  </div>
+
+  <div class="obj">
+    【challenge】id以外を使って画面情報の一部を取得する。<br />    
+    <p class="challenge" id="qb18" onClick="dispQ('#qb18','#q18');">問題を表示</p>
+    <span class="blind" id="q18">  
+    <pre class="prettyprint" id="src160">
+    &lt;html&gt; 
+      &lt;body&gt;
+        &lt;h1  id="title1"&gt;タイトル1&lt;/h1&gt;
+        &lt;h2 class="title2"&gt;タイトル2&lt;/h2&gt;
+        &lt;h2 class="title3" &gt;タイトル3&lt;/h2&gt;
+        &lt;h3 &gt;タイトル4&lt;/h3&gt;
+        &lt;h4 &gt;タイトル5&lt;/h4&gt;
+      &lt;/body&gt;
+      &lt;script&gt;
+        //getElementByIdでIDを指定して取得
+        var title1 = document.getElementById('title1'); 
+        console.dir(title1);//タイトル1
+
+        //getElementsByClassNameでclassを指定して取得
+        var title2 = document.getElementsByClassName('title2'); 
+        console.dir(title2);//タイトル2
+
+        //getElementsByClassNameでclassを指定して取得
+        [処理]
+        console.dir(title3);//タイトル3
+
+        //getElementsByTagNameでタグ名を指定して取得
+        var title4 = document.getElementsByTagName('h3'); 
+        console.dir(title4);//タイトル4
+
+        //getElementsByTagNameでタグ名を指定して取得
+        [処理]
+        console.dir(title5);//タイトル5        
         &lt;/script&gt; 
     &lt;/html&gt; 
     </pre>
-    <p class="copy" id="copy1">選択</p>
-    テキストエディタにindex.htmlという名前で保存しよう
+    ※タグにIDを追加すること<br />
+    ※h1タグの文字情報の場所を確認すること<br />
+    <p class="copy" id="copy160">選択</p>
+    </span>
   </div>
 
+
+
+
+
   <div class="obj">
-    変数を使う
-    <pre class="prettyprint" id="src2">
+    画面の情報を変更する<br />      
+    <pre class="prettyprint" id="src17">
     &lt;html&gt; 
-      &lt;script&gt; 
-        var text = "masao";
-        console.dir(text);
+      &lt;body&gt;
+        &lt;h1 id="title"&gt;タイトル&lt;/h1&gt;
+      &lt;/body&gt;
+      &lt;script&gt;
+        var a = document.getElementById('title');
+        a.innerText = "まさお";
       &lt;/script&gt; 
     &lt;/html&gt; 
     </pre>
-    <p class="copy" id="copy2">選択</p>
+    <p class="copy" id="copy17">選択</p>
   </div>
 
   <div class="obj">
-    変数を使う2
-    <pre class="prettyprint" id="src2_1">
-    &lt;html&gt; 
-      &lt;script&gt; 
-        var text = "masao";
-        text = "hideo";
-        console.dir(text);
-      &lt;/script&gt; 
-    &lt;/html&gt; 
-    </pre>
-    <p class="copy" id="copy2_1">選択</p>
-  </div>
-
-  <div class="obj">
-    変数を使う3
-    <pre class="prettyprint" id="src2_2">
-    &lt;html&gt; 
-      &lt;script&gt; 
-        var num1 = 1;
-        var num2 = num1 + 1;
-        var num3 = num1 + num2;
-        console.dir(num1);
-        console.dir(num2);
-        console.dir(num3);
-      &lt;/script&gt; 
-    &lt;/html&gt; 
-    </pre>
-    <p class="copy" id="copy2_2">選択</p>
-  </div>
-
-  <div class="obj" >
-      【問題】//〜処理〜と書いてあるところに下にあるコードから必要なものを選んで完成させてください。<br />
-      hideo<br />
-      masao<br />
-      と表示できれば完成です。<br />      
-      <p class="challenge" id="qb3" onClick="dispQ('#qb3','#q3');">問題を表示</p>
-      <span class="blind" id="q3">
-      <pre class="prettyprint" id="src3">
+    ボタンをクリックされた時のイベントを割り当てる<br />      
+    <pre class="prettyprint" id="src19">
       &lt;html&gt; 
-          &lt;script&gt; 
-          var text1 = "masao";
-          var text2 = "hideo";
-          //〜処理〜
-          console.dir(text1);//hideoを表示
-          console.dir(text2);//masaoを表示    
-          &lt;/script&gt; 
-      &lt;/html&gt; 
-      </pre>
-      <p class="copy" id="copy3">選択</p>
-      <div class="select">
-      ここから選ぶ<br />
-      text1 = text1;<br />
-      text1 = text2;<br />
-      text1 = text3;<br />
-      text2 = text1;<br />
-      text2 = text2;<br />
-      text2 = text3;<br />
-      var text3 = text1;<br />
-      var text3 = text2;<br />
-      var text3 = text3;<br />
-      text1 = "masao";<br />
-      text2 = "hideo";<br />
-      </div>
-    </span>
-  </div>
-
-  <div class="obj">
-      【問題】[処理]と書いてあるところに４つの変数を使いコード書いて完成させてください。<br />
-      <div class="ans">
-        3<br />
-        54<br />
-        41<br />
-        12<br />
-      </div>
-      と表示できれば完成です。<br />
-      <p class="challenge" id="qb4" onClick="dispQ('#qb4','#q4');">問題を表示</p>
-      <span class="blind" id="q4">  
-    <pre class="prettyprint" id="src4">
-    &lt;html&gt; 
-        &lt;script&gt; 
-        var text1 = 1;//数値
-        var text2 = 2;//数値
-        var text3 = "4";//文字列
-        var text4 = "5";//文字列
-
-        console.dir([処理]);//3を表示
-        console.dir([処理]);//54を表示
-        console.dir([処理]);//41を表示
-        console.dir([処理]);//12を表示
+      &lt;body&gt;
+        &lt;input type="text" id="tb"&gt;
+        &lt;button id="bt"&gt; 押せ！&lt;/button&gt;    
+      &lt;/body&gt;
+        &lt;script&gt;
+        function test(){
+          console.dir('clickされたよ！');
+        }        
+        var bt = document.getElementById('bt');
+        bt.addEventListener('click',test);
         &lt;/script&gt; 
-    &lt;/html&gt; 
+      &lt;/html&gt; 
     </pre>
-    <p class="copy" id="copy4">選択</p>
-    </span>
+    <p class="copy" id="copy19">選択</p>
   </div>
-
-  <hr />
-  <h2>繰り返し処理をしよう</h2>
+  
   <div class="obj">
-    繰り返しの処理を書いてみましょう。
-    <pre class="prettyprint" id="src5">
-    &lt;html&gt; 
-      &lt;script&gt; 
-      var i = 0;
-      while(i&lt;10){
-        console.dir(i);//0~9を出力
-        i = i + 1;
-      } 
-      &lt;/script&gt; 
-    &lt;/html&gt; 
+      テキストを取得する<br />      
+    <pre class="prettyprint" id="src20">
+      &lt;html&gt; 
+        &lt;body&gt;
+          &lt;input type="text" id="tb" value="masao"&gt;
+          &lt;button id="bt"&gt;押せ！&lt;/button&gt;    
+        &lt;/body&gt;
+        &lt;script&gt;
+        function test(){
+          var tb = document.getElementById('tb');
+          console.dir(tb);
+        }      
+        var bt = document.getElementById('bt');
+        bt.addEventListener('click',test);
+        &lt;/script&gt; 
+      &lt;/html&gt; 
     </pre>
-    <p class="copy" id="copy5">選択</p>
+    <p class="copy" id="copy20">選択</p>
   </div>
+  
   <div class="obj">
-    【問題】繰り返しの条件を書いてみましょう。
-    <p class="challenge" id="qb6" onClick="dispQ('#qb6','#q6');">問題を表示</p>
-    <span class="blind" id="q6">
-    <pre class="prettyprint" id="src6">
-    &lt;html&gt; 
-      &lt;script&gt; 
-      var i = 0;
-      while(i&lt;10){
-        console.dir(i);//0~9を出力
-        i+=1;//i=i+1の省略した書き方
-      } 
-      &lt;/script&gt; 
-    &lt;/html&gt; 
-    </pre>
-    <p class="copy" id="copy6">選択</p>
-    <div class="select">
-    ①0~19を表示してみよう!<br />
-    ②1~9を表示してみよう！<br />
-    ③2・4・6・8を表示してみよう!<br />
-    ④20~1を表示してみよう！<br />
-    </div>
-    </span>
-  </div>
-
-  <div class="obj">
-    【問題】下にあるコードを使ってhideoとmasaoを交互に表示してみましょう
-    <p class="challenge" id="qb7" onClick="dispQ('#qb7','#q7');">問題を表示</p>
-    <span class="blind" id="q7">
-    <pre class="prettyprint" id="src7">
-    &lt;html&gt; 
-      &lt;script&gt; 
-      var i = 0;
-      var text1 = "hideo";
-      var text2 = "masao";
-      while(i&lt;10){
-        [処理]
-        [処理]
-        [処理]
-        console.dir(text2);
-      } 
-      &lt;/script&gt; 
-    &lt;/html&gt; 
-    </pre>
-    <p class="copy" id="copy7">選択</p>
-    <div class="select">
-        ここから選ぶ<br />
-        text1 = text1;<br />
-        text1 = text2;<br />
-        text1 = text3;<br />
-        text2 = text1;<br />
-        text2 = text2;<br />
-        text2 = text3;<br />
-        var text3 = text1;<br />
-        var text3 = text2;<br />
-        var text3 = text3;<br />
-        text1 = "masao";<br />
-        text2 = "hideo";<br />
-    </div>
-    </span>
-  </div>
-
-  <hr />
-  <h2>条件分岐処理をしよう</h2>
-  <div class="obj">
-      条件が分岐する処理を書いてみましょう。
-    <pre class="prettyprint" id="src8">
-    &lt;html&gt; 
-      &lt;script&gt; 
-      var text = 10;
-      if(text == 10){
-        console.dir("10が入ってた");
-      }  
-      &lt;/script&gt; 
-    &lt;/html&gt; 
-    </pre>
-    <p class="copy" id="copy8">選択</p>
-  </div>
-
-  <div class="obj">
-      elseを使って２分岐する
-    <pre class="prettyprint" id="src9">
-    &lt;html&gt; 
-      &lt;script&gt; 
-      var text = 11;//数字を変える
-      if(text == 10){
-        console.dir("10が入ってた");
-      }else{
-        console.dir("10じゃない");  
-      }  
-      &lt;/script&gt; 
-    &lt;/html&gt; 
-    </pre>
-    <p class="copy" id="copy9">選択</p>
-  </div>
-  <div class="obj">
-      【問題】ループと分岐を使って5と６の間にーを表示しよう(10.html)<br />
-      [処理]に条件式を選び表示例のように出力しよう
-      <p class="challenge" id="qb10" onClick="dispQ('#qb10','#q10');">問題を表示</p>
-      <span class="blind" id="q10">
-    <pre class="prettyprint" id="src10">
-    &lt;html&gt; 
-      &lt;script&gt; 
-      var i = 0;
-      while(i&lt;10){
-        if([処理]){
-            console.dir("ー");
+    取得したテキストを出力する<br />      
+    <pre class="prettyprint" id="src21">
+      &lt;html&gt; 
+        &lt;body&gt;
+        &lt;input type="text" id="tb" value="masao"&gt;
+        &lt;button id="bt"&gt;押せ！&lt;/button&gt;
+        &lt;p id="output"&gt;未入力&lt;/p&gt;  
+        &lt;/body&gt;
+        &lt;script&gt;
+        function test(){
+          var tb = document.getElementById('tb');
+          var p = document.getElementById('output');
+          p.innerText = tb.value;
         }
-        console.dir(i);
-        i = i + 1;
-      } 
-      &lt;/script&gt; 
-    &lt;/html&gt; 
+        var bt = document.getElementById('bt');
+        bt.addEventListener('click',test);   
+        &lt;/script&gt; 
+      &lt;/html&gt; 
     </pre>
-    <p class="copy" id="copy10">選択</p>
-    <div class="select">
-      ここから選ぶ<br />
-      i&lt;5<br />
-      i&lt;6<br />
-      i&gt;5<br />
-      i&gt;6<br />
-      i==5<br />
-      i==6<br />
-      i!=5<br />
-      i!=6<br />
-    </div>
-    <div class="ans">
-      このように表示されれば正解です。<br />
-      表示例<br />
-      0<br />
-      1<br />
-      2<br />
-      3<br />
-      4<br />
-      5<br />
-      ー<br />
-      6<br />
-      7<br />
-      8<br />
-      9<br />
-    </div>
-    </span>
+    <p class="copy" id="copy21">選択</p>
   </div>
-
-
-  <hr />
-  <h2>関数を作る</h2>
-  <div class="obj">
-    ソースを部品化する。
-    <pre class="prettyprint" id="src11">
-    &lt;html&gt; 
-      &lt;script&gt; 
-      kurikaeshi();
-      kurikaeshi();
-      
-      function kurikaeshi(){
-           var i = 0;
-           while(i&lt;5){
-             console.dir("masao:"+i);
-             i = i + 1;
-           }
-      }      
-      &lt;/script&gt; 
-    &lt;/html&gt; 
-    </pre>
-    <p class="copy" id="copy11">選択</p>
-  </div>
-
-  <div class="obj">
-      引数を使って関数の中に値を渡す
-    <pre class="prettyprint" id="src12">
-    &lt;html&gt; 
-      &lt;script&gt; 
-      kurikaeshi("masao");
-      kurikaeshi("hideo");
-
-      function kurikaeshi(text){
-            var i = 0;
-            while(i&lt;10){
-              console.dir(text+':'+i);
-              i = i + 1;
-            }
-      }      
-      &lt;/script&gt; 
-    &lt;/html&gt; 
-    </pre>
-    <p class="copy" id="copy12">選択</p>
-  </div>
-
-  <div class="obj">
-    【問題】10より大きい数字を判定する関数を作ってみましょう<br />
-    10より大きい数字を入れると「10より大きい」とlogを出しましょう.(13.html)
-    <p class="challenge" id="qb120" onClick="dispQ('#qb120','#q120');">問題を表示</p>
-    <span class="blind" id="q120">
-    <pre class="prettyprint" id="src120">
-    &lt;html&gt; 
-      &lt;script&gt; 
-      kurikaeshi(9);
-      kurikaeshi(11);
-
-      function kurikaeshi(num){
-        [処理]        
-      }      
-      &lt;/script&gt; 
-    &lt;/html&gt; 
-    </pre>
-    <p class="copy" id="copy120">選択</p>
-    </span>
-  </div>
-
-
-  <div class="obj">
-    【問題】値を返す関数を作ってみよう
-    <p class="challenge" id="qb13" onClick="dispQ('#qb13','#q13');">問題を表示</p>
-    <span class="blind" id="q13">
-    <pre class="prettyprint" id="src13">
-    &lt;html&gt; 
-      &lt;script&gt; 
-      var val1 = ichitasu(5);
-      var val2 = ichihiku(5);
-      console.log(val1);//6
-      console.log(val2);//4
-
-      function ichitasu(num){
-        return num + 1;
-      }      
-
-      function ichihiku(num){
-        [処理]
-      }      
-      &lt;/script&gt; 
-    &lt;/html&gt; 
-    </pre>
-    <p class="copy" id="copy13">選択</p>
-    </span>
-  </div>
-
-
-  <div class="obj">
-    【問題】関数に関数を渡す。
-    <p class="challenge" id="qb14" onClick="dispQ('#qb14','#q14');">問題を表示</p>
-    <span class="blind" id="q14">
-    <pre class="prettyprint" id="src14">
-    &lt;html&gt; 
-      &lt;script&gt; 
-      console.log(methodReturn());//hideoを表示
-      method([処理]);//masaoと表示させる
-
-      function methodArgs(){
-        return "masao";
-      }
-      function methodReturn(){
-        return "hideo";
-      }
-      function method(callback){
-        var name = callback();
-        console.log(name);
-      }
-      &lt;/script&gt; 
-    &lt;/html&gt; 
-    </pre>
-    <p class="copy" id="copy14">選択</p>
-    </span>
-  </div>
-
-
-
-
 
   </body>
   <script>
