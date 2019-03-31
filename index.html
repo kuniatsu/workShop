@@ -1,29 +1,43 @@
 <html> 
-        <body>
-          <h1  id="title1">タイトル1</h1>
-          <h2 class="title2">タイトル2</h2>
-          <h2 id="title3" >タイトル3</h2>
-          <h3 >タイトル4</h3>
-          <h4 >タイトル5</h4>
+        <body style="text-align: center;">
+          <p id='num'>ここに説明文</p>
+          <input id='tt' >
+          <button id='bt'>ボタンの中</button>    
         </body>
         <script>
-          //getElementByIdでIDを指定して取得
-          var title1 = document.getElementById('title1'); 
-          console.dir(title1);//タイトル1
-  
-          //getElementsByClassNameでclassを指定して取得
-          var title2 = document.getElementsByClassName('title2'); 
-          console.dir(title2);//タイトル2
-  
-          //getElementsByIdでidを指定して取得
-          [処理]
-          console.dir(title3);//タイトル3
-  
-          //getElementsByTagNameでタグ名を指定して取得
-          var title4 = document.getElementsByTagName('h3'); 
-          console.dir(title4);//タイトル4
+        var keta = 10;
+        var bt = document.getElementById('bt');
+        var tt = document.getElementById('tt');
+        var num = document.getElementById('num');
+        var kotae = "";                              /*この行を追加*/
       
-          </script> 
+        bt.addEventListener('click',say);
+        tt.addEventListener('click',numkesu);
+      
+        function say(){
+          if(tt.value==num.innerText){     /*この行を変更*/
+            console.dir('正解');
+            keta = keta*10;
+          }
+          console.dir('次の問題!');
+          num.innerText = random(keta);    /*この行を変更*/
+          /*ここに１行追加*/
+          tt.value = "";
+          bt.innerText = "決定!";
+        }
+      
+        function random(ketasuu){
+          var ransuu = Math.random(); /* 乱数作成*/
+          var ransuu2 = ransuu*ketasuu; /*100倍する*/
+          var ransuu3 = Math.floor(ransuu2); /* 小数点以下切り捨て*/
+          return ransuu3;
+        }
+      
+        function numkesu(){
+          console.dir("消えまーす!");
+          num.innerText = "";
+        }              
+        /*kotaeがなんのためにあるか考えてみよう*/  
+        </script> 
       </html> 
-      
-  
+    
