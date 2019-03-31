@@ -110,7 +110,11 @@
   <div class="obj">
     メッセージを出す
     <pre class="prettyprint" id="src1">
+    &lt;html&gt; 
+        &lt;script&gt; 
             console.dir("masao"); 
+        &lt;/script&gt; 
+    &lt;/html&gt; 
     </pre>
     <p class="copy" id="copy1">選択</p>
     テキストエディタにindex.htmlという名前で保存しよう
@@ -119,8 +123,12 @@
   <div class="obj">
     変数を使う
     <pre class="prettyprint" id="src2">
+    &lt;html&gt; 
+      &lt;script&gt; 
         var text = "masao";
         console.dir(text);
+      &lt;/script&gt; 
+    &lt;/html&gt; 
     </pre>
     <p class="copy" id="copy2">選択</p>
   </div>
@@ -128,9 +136,13 @@
   <div class="obj">
     変数を使う2
     <pre class="prettyprint" id="src2_1">
+    &lt;html&gt; 
+      &lt;script&gt; 
         var text = "masao";
         text = "hideo";
         console.dir(text);
+      &lt;/script&gt; 
+    &lt;/html&gt; 
     </pre>
     <p class="copy" id="copy2_1">選択</p>
   </div>
@@ -138,12 +150,16 @@
   <div class="obj">
     変数を使う3
     <pre class="prettyprint" id="src2_2">
+    &lt;html&gt; 
+      &lt;script&gt; 
         var num1 = 1;
         var num2 = num1 + 1;
         var num3 = num1 + num2;
         console.dir(num1);
         console.dir(num2);
         console.dir(num3);
+      &lt;/script&gt; 
+    &lt;/html&gt; 
     </pre>
     <p class="copy" id="copy2_2">選択</p>
   </div>
@@ -156,11 +172,15 @@
       <p class="challenge" id="qb3" onClick="dispQ('#qb3','#q3');">問題を表示</p>
       <span class="blind" id="q3">
       <pre class="prettyprint" id="src3">
+      &lt;html&gt; 
+          &lt;script&gt; 
           var text1 = "masao";
           var text2 = "hideo";
           //〜処理〜
           console.dir(text1);//hideoを表示
           console.dir(text2);//masaoを表示    
+          &lt;/script&gt; 
+      &lt;/html&gt; 
       </pre>
       <p class="copy" id="copy3">選択</p>
       <div class="select">
@@ -181,7 +201,7 @@
   </div>
 
   <div class="obj">
-      【時間があれば問題】[処理]と書いてあるところに４つの変数を使いコード書いて完成させてください。<br />
+      【問題】[処理]と書いてあるところに４つの変数を使いコード書いて完成させてください。<br />
       <div class="ans">
         3<br />
         54<br />
@@ -192,6 +212,8 @@
       <p class="challenge" id="qb4" onClick="dispQ('#qb4','#q4');">問題を表示</p>
       <span class="blind" id="q4">  
     <pre class="prettyprint" id="src4">
+    &lt;html&gt; 
+        &lt;script&gt; 
         var text1 = 1;//数値
         var text2 = 2;//数値
         var text3 = "4";//文字列
@@ -201,6 +223,8 @@
         console.dir([処理]);//54を表示
         console.dir([処理]);//41を表示
         console.dir([処理]);//12を表示
+        &lt;/script&gt; 
+    &lt;/html&gt; 
     </pre>
     <p class="copy" id="copy4">選択</p>
     </span>
@@ -211,11 +235,15 @@
   <div class="obj">
     繰り返しの処理を書いてみましょう。
     <pre class="prettyprint" id="src5">
+    &lt;html&gt; 
+      &lt;script&gt; 
       var i = 0;
       while(i&lt;10){
         console.dir(i);//0~9を出力
         i = i + 1;
       } 
+      &lt;/script&gt; 
+    &lt;/html&gt; 
     </pre>
     <p class="copy" id="copy5">選択</p>
   </div>
@@ -224,11 +252,15 @@
     <p class="challenge" id="qb6" onClick="dispQ('#qb6','#q6');">問題を表示</p>
     <span class="blind" id="q6">
     <pre class="prettyprint" id="src6">
+    &lt;html&gt; 
+      &lt;script&gt; 
       var i = 0;
       while(i&lt;10){
         console.dir(i);//0~9を出力
         i+=1;//i=i+1の省略した書き方
       } 
+      &lt;/script&gt; 
+    &lt;/html&gt; 
     </pre>
     <p class="copy" id="copy6">選択</p>
     <div class="select">
@@ -245,6 +277,8 @@
     <p class="challenge" id="qb7" onClick="dispQ('#qb7','#q7');">問題を表示</p>
     <span class="blind" id="q7">
     <pre class="prettyprint" id="src7">
+    &lt;html&gt; 
+      &lt;script&gt; 
       var i = 0;
       var text1 = "hideo";
       var text2 = "masao";
@@ -254,6 +288,8 @@
         [処理]
         console.dir(text2);
       } 
+      &lt;/script&gt; 
+    &lt;/html&gt; 
     </pre>
     <p class="copy" id="copy7">選択</p>
     <div class="select">
@@ -278,10 +314,14 @@
   <div class="obj">
       条件が分岐する処理を書いてみましょう。
     <pre class="prettyprint" id="src8">
+    &lt;html&gt; 
+      &lt;script&gt; 
       var text = 10;
       if(text == 10){
         console.dir("10が入ってた");
       }  
+      &lt;/script&gt; 
+    &lt;/html&gt; 
     </pre>
     <p class="copy" id="copy8">選択</p>
   </div>
@@ -289,12 +329,16 @@
   <div class="obj">
       elseを使って２分岐する
     <pre class="prettyprint" id="src9">
+    &lt;html&gt; 
+      &lt;script&gt; 
       var text = 11;//数字を変える
       if(text == 10){
         console.dir("10が入ってた");
       }else{
         console.dir("10じゃない");  
       }  
+      &lt;/script&gt; 
+    &lt;/html&gt; 
     </pre>
     <p class="copy" id="copy9">選択</p>
   </div>
@@ -304,6 +348,8 @@
       <p class="challenge" id="qb10" onClick="dispQ('#qb10','#q10');">問題を表示</p>
       <span class="blind" id="q10">
     <pre class="prettyprint" id="src10">
+    &lt;html&gt; 
+      &lt;script&gt; 
       var i = 0;
       while(i&lt;10){
         if([処理]){
@@ -312,6 +358,8 @@
         console.dir(i);
         i = i + 1;
       } 
+      &lt;/script&gt; 
+    &lt;/html&gt; 
     </pre>
     <p class="copy" id="copy10">選択</p>
     <div class="select">
@@ -349,6 +397,8 @@
   <div class="obj">
     ソースを部品化する。
     <pre class="prettyprint" id="src11">
+    &lt;html&gt; 
+      &lt;script&gt; 
       kurikaeshi();
       kurikaeshi();
       
@@ -359,6 +409,8 @@
              i = i + 1;
            }
       }      
+      &lt;/script&gt; 
+    &lt;/html&gt; 
     </pre>
     <p class="copy" id="copy11">選択</p>
   </div>
@@ -366,6 +418,8 @@
   <div class="obj">
       引数を使って関数の中に値を渡す
     <pre class="prettyprint" id="src12">
+    &lt;html&gt; 
+      &lt;script&gt; 
       kurikaeshi("masao");
       kurikaeshi("hideo");
 
@@ -376,6 +430,8 @@
               i = i + 1;
             }
       }      
+      &lt;/script&gt; 
+    &lt;/html&gt; 
     </pre>
     <p class="copy" id="copy12">選択</p>
   </div>
@@ -386,12 +442,16 @@
     <p class="challenge" id="qb120" onClick="dispQ('#qb120','#q120');">問題を表示</p>
     <span class="blind" id="q120">
     <pre class="prettyprint" id="src120">
+    &lt;html&gt; 
+      &lt;script&gt; 
       kurikaeshi(9);
       kurikaeshi(11);
 
       function kurikaeshi(num){
         [処理]        
       }      
+      &lt;/script&gt; 
+    &lt;/html&gt; 
     </pre>
     <p class="copy" id="copy120">選択</p>
     </span>
@@ -403,6 +463,8 @@
     <p class="challenge" id="qb13" onClick="dispQ('#qb13','#q13');">問題を表示</p>
     <span class="blind" id="q13">
     <pre class="prettyprint" id="src13">
+    &lt;html&gt; 
+      &lt;script&gt; 
       var val1 = ichitasu(5);
       var val2 = ichihiku(5);
       console.log(val1);//6
@@ -415,6 +477,8 @@
       function ichihiku(num){
         [処理]
       }      
+      &lt;/script&gt; 
+    &lt;/html&gt; 
     </pre>
     <p class="copy" id="copy13">選択</p>
     </span>
@@ -426,6 +490,8 @@
     <p class="challenge" id="qb14" onClick="dispQ('#qb14','#q14');">問題を表示</p>
     <span class="blind" id="q14">
     <pre class="prettyprint" id="src14">
+    &lt;html&gt; 
+      &lt;script&gt; 
       console.log(methodReturn());//hideoを表示
       method([処理]);//masaoと表示させる
 
@@ -439,6 +505,8 @@
         var name = callback();
         console.log(name);
       }
+      &lt;/script&gt; 
+    &lt;/html&gt; 
     </pre>
     <p class="copy" id="copy14">選択</p>
     </span>

@@ -80,19 +80,57 @@
   <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
 </head>
 <body>
+
+    <h2>htmlファイルを作ろう</h2>
+    <div class="obj">
+      <pre class="prettyprint" id="src0"> 
+          &lt;html&gt; 
+          &lt;body&gt;
+            &lt;h1&gt;タイトル&lt;/h1&gt;
+          &lt;/body&gt;
+          &lt;script &gt; 
+            console.dir("test");
+          &lt;/script&gt; 
+        &lt;/html&gt; 
+  
+      </pre>
+      <p class="copy" id="copy0">選択</p>
+    </div>
+
+    <div class="obj">
+      <h2>JSファイルの分離</h2>
+      main.jsファイルを作成しましょう
+      <pre class="prettyprint" id="src1">
+      &lt;html&gt; 
+        &lt;body&gt;
+          &lt;h1&gt;タイトル&lt;/h1&gt;
+        &lt;/body&gt;
+        &lt;script src="main.js" &gt; &lt;/script&gt; 
+      &lt;/html&gt; 
+      </pre>
+      <p class="copy" id="copy1">選択</p>
+      <br>
+      <pre class="prettyprint" id="src2">
+        console.log("test");
+      </pre>
+    </div>
+
+
+
   <h2>画面に出力しよう</h2>
   <div class="obj">
       画面情報を取得する。<br />
       ※scriptタグの位置をbodyの下に変更<br />      
-    <pre class="prettyprint" id="src15">
-    &lt;html&gt; 
-      &lt;body&gt;
-        &lt;h1&gt;タイトル&lt;/h1&gt;
-      &lt;/body&gt;
-      &lt;script&gt; 
-        console.dir(document);
-      &lt;/script&gt; 
-    &lt;/html&gt; 
+    <pre class="prettyprint" id="src15"> 
+        &lt;html&gt; 
+        &lt;body&gt;
+          &lt;h1&gt;タイトル&lt;/h1&gt;
+        &lt;/body&gt;
+        &lt;script &gt; 
+          console.dir(document);
+        &lt;/script&gt; 
+      &lt;/html&gt; 
+
     </pre>
     <p class="copy" id="copy15">選択</p>
   </div>
@@ -100,15 +138,15 @@
   <div class="obj">
       画面情報の一部を取得する。<br />      
     <pre class="prettyprint" id="src16">
-    &lt;html&gt; 
-      &lt;body&gt;
-        &lt;h1 id="title"&gt;タイトル&lt;/h1&gt;
-      &lt;/body&gt;
-      &lt;script&gt;
-        var a = document.getElementById('title'); 
-        console.dir(a);
-      &lt;/script&gt; 
-    &lt;/html&gt; 
+        &lt;html&gt; 
+        &lt;body&gt;
+          &lt;h1&gt;タイトル&lt;/h1&gt;
+        &lt;/body&gt;
+        &lt;script &gt; 
+          var a = document.getElementById('title'); 
+          console.dir(a);
+        &lt;/script&gt; 
+        &lt;/html&gt; 
     </pre>
     ※タグにIDを追加すること<br />
     ※h1タグの文字情報の場所を確認すること<br />
