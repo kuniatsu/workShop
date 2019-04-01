@@ -10,5 +10,11 @@
 [https://kuniatsu.github.io/workShop/practice.html](https://kuniatsu.github.io/workShop/practice.html)   
 
 
+/*
+devToolsの使い方を再度考える
+plantUMLを使用する
+practiceの内容を減らす。問題は増やす。
+*/
+
    
 
