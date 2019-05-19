@@ -90,8 +90,6 @@
   <h2>00.推奨環境</h2>
   <div class="container">
     <p>URL：https://kuniatsu.github.io/workShop/index.html</p>
-    <p>ファイル：https://github.com/kuniatsu/workShop</p>        
-    <p>エディッタ：サクラエディッタ・terapad・VisualStudioCode</p>
     <p>ブラウザ：chrome</p>
   </div>
   <hr>
@@ -186,7 +184,7 @@
   </div>
 
   <div class="obj">
-      【時間があれば問題】[処理]と書いてあるところに４つの変数を使いコード書いて完成させてください。<br />
+      【チャレンジ問題】[処理]と書いてあるところに４つの変数を使いコード書いて完成させてください。<br />
       <div class="ans">
         3<br />
         54<br />
@@ -210,6 +208,38 @@
     <p class="copy" id="copy4">選択</p>
     </span>
   </div>
+
+
+  <div class="obj">
+    【チャレンジ問題】ES6から新しく加わった変数の宣言を使おう!エラーが発生する理由を考えてみましょう。<br />
+    <p class="challenge" id="qb4_" onClick="dispQ('#qb4_','#q4_');">問題を表示</p>
+    <span class="blind" id="q4_">  
+  <pre class="prettyprint" id="src4_">
+      let text1 = 1;
+      const text2 = 1;
+      text1+=1;
+      //text2+=1; //エラーが発生する
+      console.dir(text1);
+      console.dir(text2);
+  </pre>
+  <p class="copy" id="copy4_">選択</p>
+  </span>
+</div>
+
+<div class="obj">
+  【チャレンジ問題】配列を使ってhideo・masao・hidekiを表示しよう<br />
+  <p class="challenge" id="qb4_1" onClick="dispQ('#qb4_1','#q4_1');">問題を表示</p>
+  <span class="blind" id="q4_1">  
+  <pre class="prettyprint" id="src4_1">
+    var array = ["masao","masao"];
+    console.dir(array[0]);
+    console.dir(array[1]);
+  </pre>
+  <p class="copy" id="copy4_1">選択</p>
+  </span>
+</div>
+
+
 
   <hr />
   <h2>繰り返し処理をしよう</h2>
@@ -260,6 +290,7 @@
         [処理]
         [処理]
         console.dir(text2);
+        [処理]
       } 
       console.dir("-----END-----");
     </pre>
@@ -277,17 +308,37 @@
         var text3 = text3;<br />
         text1 = "masao";<br />
         text2 = "hideo";<br />
+        i = i + 1;<br />
     </div>
     </span>
   </div>
+
+  <div class="obj">
+    【チャレンジ問題】whileをfor文に書き換えて、hideoとmasaoを交互に表示してみましょう。<br />
+    まずこのまま動かし、必要な処理に書き換えてください。
+    <p class="challenge" id="qb7_" onClick="dispQ('#qb7_','#q7_');">問題を表示</p>
+    <span class="blind" id="q7_">
+    <pre class="prettyprint" id="src7_">
+      var text1 = "hideo";
+      var text2 = "masao";
+      for(var i=0; i&lt;10;i++){
+        console.dir(i);
+      } 
+      console.dir("-----END-----");
+    </pre>
+    <p class="copy" id="copy7_">選択</p>
+    </span>
+  </div>
+
 
   <hr />
   <h2>条件分岐処理をしよう</h2>
   <div class="obj">
       条件が分岐する処理を書いてみましょう。
     <pre class="prettyprint" id="src8">
-      var text = 10;
-      if(text == 10){
+      var text1 = 10;
+      var text2 = 9;
+      if(text1 == 10){
         console.dir("10が入ってた");
       }  
     </pre>
@@ -306,6 +357,8 @@
     </pre>
     <p class="copy" id="copy9">選択</p>
   </div>
+
+
   <div class="obj">
       【問題】ループと分岐を使って5と６の間にーを表示しよう<br />
       [処理]に条件式を選び表示例のように出力しよう
@@ -351,6 +404,57 @@
     </div>
     </span>
   </div>
+
+
+
+  <div class="obj">
+    【チャレンジ問題】２つより多い条件の分岐を作ってみよう <br />
+    numに代入する数字によって正しいメッセージが出るように[処理]に条件を書いてください。
+    <p class="challenge" id="qb10_" onClick="dispQ('#qb10_','#q10_');">問題を表示</p>
+    <span class="blind" id="q10_">
+  <pre class="prettyprint" id="src10_">
+    var num = //変数numに0か1か2か3か4を代入させる。
+
+    if(num==1){
+      console.dir("numは1");
+    }else if(num==2){
+      console.dir("numは2");
+    }else if([処理]){
+      console.dir("numは3以上");
+    }else{
+      console.dir("numは1より小さい");
+    }
+
+    console.dir("-----END-----");
+  </pre>
+  <p class="copy" id="copy10_">選択</p>
+  </span>
+</div>
+
+
+
+<div class="obj">
+  【チャレンジ問題】1行で条件分岐させよう <br />
+  <p class="challenge" id="qb10_1" onClick="dispQ('#qb10_1','#q10_1');">問題を表示</p>
+  <span class="blind" id="q10_1">
+  <pre class="prettyprint" id="src10_1">
+  var num1 = 1;
+  var num2 = ;//変数num2に0か1か2か3か4を代入させる。
+
+  var ans1 = num1==1 ? "num1は1" : "num1は1以外";
+  var ans2 = [処理]  ? "num2は3" : "num2は1以外";
+  
+  console.dir(ans1);//num1は1
+  console.dir(ans2);//num2は3
+
+  console.dir("-----END-----");
+  </pre>
+<p class="copy" id="copy10_1">選択</p>
+</span>
+</div>
+
+
+
 
 
   <hr />
@@ -417,8 +521,8 @@
     <pre class="prettyprint" id="src13">
       var val1 = ichitasu(5);
       var val2 = ichihiku(5);
-      console.log(val1);//6
-      console.log(val2);//4
+      console.log(val1);//6を表示
+      console.log(val2);//4を表示
 
       function ichitasu(num){
         return num + 1;
@@ -435,12 +539,39 @@
 
 
   <div class="obj">
+    【時間があればチャレンジ上級】再起読み出し<br />
+    0~4を表示するsaiki関数をwhileやforを使わずに完成させてください
+    <p class="challenge" id="qb14_" onClick="dispQ('#qb14_','#q14_');">問題を表示</p>
+    <span class="blind" id="q14_">
+    <pre class="prettyprint" id="src14_">
+      var i = 0;
+      saiki(i);
+      function saiki(i){
+        if(i < 5){
+          console.dir(i);
+          [処理]
+          [処理]
+        }
+      }
+    </pre>
+    <p class="copy" id="copy14_">選択</p>
+    </span>
+  </div>
+
+
+
+  <div class="obj">
     【時間があればチャレンジ上級】関数に関数を渡す。
     <p class="challenge" id="qb14" onClick="dispQ('#qb14','#q14');">問題を表示</p>
     <span class="blind" id="q14">
     <pre class="prettyprint" id="src14">
-      console.dir(methodReturn());//hideoを表示
+      console.dir(methodReturn());//hideoを表示させる
       method([処理]);//masaoと表示させる
+      hinto();//hintoと表示させる
+
+      var hinto = function(){
+        console.dir("hinto");
+      }
 
       function methodArgs(){
         return "masao";
