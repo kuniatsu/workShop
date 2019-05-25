@@ -75,6 +75,12 @@
         /* visibility:hidden; */
     }
 
+    .prettyprint{
+      background-color: #ffd;
+      padding: 2px; 
+      border: 1px solid #888;
+    }
+
   </style>
 
   <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
@@ -83,6 +89,7 @@
 
     <h2>htmlファイルを作ろう</h2>
     <div class="obj">
+      ※index.htmlという名前で保存
       <pre class="prettyprint" id="src0"> 
           &lt;html&gt; 
           &lt;body&gt;
@@ -110,9 +117,15 @@
       </pre>
       <p class="copy" id="copy1">選択</p>
       <br>
+     </div>
+
+    <div class="obj">
+      独立したmain.jsファイル
       <pre class="prettyprint" id="src2">
         console.log("test");
       </pre>
+      <p class="copy" id="copy2">選択</p>
+      <br>
     </div>
 
 
@@ -120,41 +133,32 @@
   <h2>画面に出力しよう</h2>
   <div class="obj">
       画面情報を取得する。<br />
-      ※scriptタグの位置をbodyの下に変更<br />      
+      ※main.jsを変更<br />      
     <pre class="prettyprint" id="src15"> 
-        &lt;html&gt; 
-        &lt;body&gt;
-          &lt;h1&gt;タイトル&lt;/h1&gt;
-        &lt;/body&gt;
-        &lt;script &gt; 
           console.dir(document);
-        &lt;/script&gt; 
-      &lt;/html&gt; 
-
     </pre>
     <p class="copy" id="copy15">選択</p>
   </div>
 
-  <div class="obj">
-      画面情報の一部を取得する。<br />      
-    <pre class="prettyprint" id="src16">
-        &lt;html&gt; 
-        &lt;body&gt;
-          &lt;h1&gt;タイトル&lt;/h1&gt;
-        &lt;/body&gt;
-        &lt;script &gt; 
-          var a = document.getElementById('title'); 
-          console.dir(a);
-        &lt;/script&gt; 
-        &lt;/html&gt; 
-    </pre>
-    ※タグにIDを追加すること<br />
-    ※h1タグの文字情報の場所を確認すること<br />
-    <p class="copy" id="copy16">選択</p>
-  </div>
 
   <div class="obj">
-    【問題】id以外を使って画面情報の一部を取得する。<br />    
+      画面情報の一部を取得する。<br />    
+      ※main.jsを変更<br />    
+    <pre class="prettyprint" id="src16">
+          var a = document.getElementById('title'); 
+          console.dir(a);
+    </pre>
+    <p class="copy" id="copy16">選択</p>    
+    ※タグにIDを追加すること<br />
+    ※h1タグの文字情報の場所を確認すること<br />
+  </div>
+
+
+  <div class="obj">
+    【問題】id以外を使って画面情報の一部を取得する。<br />
+    ①index.htmlとmain.jsに分けて保存する。<br />
+    ②consoleの後ろのコメントに書かれている文字を画面から取得し表示する<br />
+    ③コメントを外し、チャレンジ問題に挑戦
     <p class="challenge" id="qb18" onClick="dispQ('#qb18','#q18');">問題を表示</p>
     <span class="blind" id="q18">  
     <pre class="prettyprint" id="src160">
@@ -181,16 +185,16 @@
         console.dir(title3);//タイトル3
 
         //チャレンジ！getElementsByClassでclassを指定して取得
-        [処理]
-        console.dir(title4);//タイトル4
+        //[処理]
+        //console.dir(title4);//タイトル4
 
         //getElementsByTagNameでタグ名を指定して取得
-        var title4 = document.getElementsByTagName('h3'); 
-        console.dir(title5);//タイトル5
+        //var title4 = document.getElementsByTagName('h3'); 
+        //console.dir(title5);//タイトル5
 
         //チャレンジ！getElementsByTagNameでタグ名を指定して取得
-        [処理]
-        console.dir(title6);//タイトル6       
+        //[処理]
+        //console.dir(title6);//タイトル6       
         &lt;/script&gt; 
     &lt;/html&gt; 
     </pre>
@@ -199,6 +203,25 @@
   </div>
 
 
+
+  <div class="obj">
+      【チャレンジ問題】CSSも外部ファイルにしてみよう<br />
+      style.cssを作成してみよう。
+      <p class="challenge" id="qb1_" onClick="dispQ('#qb1_','#q1_');">問題を表示</p>
+      <span class="blind" id="q1_">
+          <p><br />htmlファイルにはbodyタグの上に<br />
+          &lt;head><br />
+          &lt;link rel='stylesheet' type='text/css' href='style.css' /><br />
+          &lt;/head><br />
+          を追加<br /></p>
+    <pre class="prettyprint" id="src1_">
+        h1{
+          color:red;
+        }
+    </pre>
+    <p class="copy" id="copy1_">選択</p>
+    </span>
+  </div>
 
 
 
