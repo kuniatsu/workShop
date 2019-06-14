@@ -1,6 +1,6 @@
 <html>
 <head>
-  <title>js講座テキスト 19/05/25</title>
+  <title>js講座テキスト 19/06/15</title>
   <style>
     body{
         margin-left:20%;
@@ -326,7 +326,8 @@
       </pre>
       <p class="copy" id="copy160_1">選択</p>
       </span>
-    </div>
+  </div>
+
   <hr />
   <h1>そのほか小技</h1>
   <p class="challenge" id="qbkowaza" onClick="dispQ('#qbkowaza','#qkowaza');">開く</p>
@@ -367,6 +368,10 @@
         <p class="copy" id="copy23">選択</p>
       </div>
 
+
+
+
+<!--
       <h2>乱数を使う</h2>
       <div class="obj">
           乱数を表示する<br />      
@@ -415,6 +420,107 @@
         </pre>
         <p class="copy" id="copy26">選択</p>
       </div>
+    -->
+
+    <h2>配列を使う</h2>
+      <div class="obj">
+        配列を使おう<br />      
+        <pre class="prettyprint" id="src27">
+          &lt;html&gt; 
+            &lt;script&gt;
+            var array = ["みかん","りんご","バナナ"];
+            console.dir(array[0]);
+            console.dir(array[1]);
+            console.dir(array[2]);
+            &lt;/script&gt; 
+          &lt;/html&gt; 
+        </pre>
+        <p class="copy" id="copy27">選択</p>
+      </div>
+
+      <div class="obj">
+        配列に追加しよう<br />      
+        <pre class="prettyprint" id="src28">
+          &lt;html&gt; 
+            &lt;script&gt;
+            var array = ["みかん","りんご","バナナ"];
+            array.push("もも");
+            console.dir(array[0]);
+            console.dir(array[1]);
+            console.dir(array[2]);
+            console.dir(array[3]);
+            &lt;/script&gt; 
+          &lt;/html&gt; 
+        </pre>
+        <p class="copy" id="copy28">選択</p>
+      </div>
+
+      <div class="obj">
+        配列を数えよう<br />      
+        <pre class="prettyprint" id="src29">
+          &lt;html&gt; 
+            &lt;script&gt;
+            var array = ["みかん","りんご","バナナ"];
+            console.dir(array.length);
+            array.push("もも");
+            console.dir(array.length);            
+            &lt;/script&gt; 
+          &lt;/html&gt; 
+        </pre>
+        <p class="copy" id="copy29">選択</p>
+      </div>
+
+
+      <div class="obj">
+        【問題】<br />
+         配列の中身をループを使って確認しよう<br />
+         [処理]を変更してプログラムを完成させましょう。
+        <p class="challenge" id="qb30_1" onClick="dispQ('#qb30_1','#q30_1');">問題を表示</p>
+        <span class="blind" id="q30_1">  
+        <pre class="prettyprint" id="src30_1">
+        &lt;html&gt; 
+          &lt;script&gt;
+           var array = ["みかん","りんご","バナナ"];
+           var i = 0;
+           while([処理] < 3 ){
+            console.dir(array[処理]);
+            i = i + 1;
+           }
+          &lt;/script&gt; 
+        &lt;/html&gt; 
+        </pre>
+        <p class="copy" id="copy30_1">選択</p>
+        </span>
+       </div>
+
+
+       <div class="obj">
+        【問題】<br />
+         配列の中身を確認する関数を作りましょう<br />
+         [処理]を変更してプログラムを完成させましょう。
+        <p class="challenge" id="qb31_1" onClick="dispQ('#qb31_1','#q31_1');">問題を表示</p>
+        <span class="blind" id="q31_1">  
+        <pre class="prettyprint" id="src31_1">
+        &lt;html&gt; 
+          &lt;script&gt;
+           var array = ["みかん","りんご","バナナ"];
+           nakami(array);//"みかん","りんご","バナナ"を表示
+           array.push("もも");
+           nakami(array);//"みかん","りんご","バナナ","もも"を表示
+
+           function nakami(array){
+             [処理]
+           }
+          &lt;/script&gt; 
+        &lt;/html&gt; 
+        </pre>
+        <p class="copy" id="copy31_1">選択</p>
+        </span>
+       </div>
+
+
+
+
 
     </span>
 
