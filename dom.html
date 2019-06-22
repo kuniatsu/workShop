@@ -178,7 +178,7 @@
 
   <div class="obj">
     【問題】id以外を使って画面情報の一部を取得する。<br />
-    ①index.htmlとmain.jsに分けて保存する。<br />
+    ①index.htmlとmain.jsに分けて保存する。(現在はhtmlファイルにjsが書かれているので、jsはmain.jsに書くように変更する)<br />
     ②consoleの後ろのコメントに書かれている文字を画面から取得し表示する<br />
     ③コメントを外し、チャレンジ問題に挑戦
     <p class="challenge" id="qb18" onClick="dispQ('#qb18','#q18');">問題を表示</p>
@@ -196,15 +196,15 @@
       &lt;script&gt;
         //getElementByIdでIDを指定して取得
         var title1 = document.getElementById('title1'); 
-        console.dir(title1);//タイトル1
+        console.dir([処理]);//タイトル1をconsoleに表示させる
 
         //getElementsByClassNameでclassを指定して取得
         var title2 = document.getElementsByClassName('title2'); 
-        console.dir(title2);//タイトル2
+        console.dir(title2[0].innerText);
 
         //getElementsByIdでidを指定して取得
         [処理]
-        console.dir(title3);//タイトル3
+        console.dir(title3);//タイトル3をconsoleに表示させる
 
         ///*チャレンジ！getElementsByClassでclassを指定して取得*/
         //[処理]
@@ -221,6 +221,11 @@
     &lt;/html&gt; 
     </pre>
     <p class="copy" id="copy160">選択</p>
+    ②はconsoleに<br />
+    タイトル1<br />
+    タイトル2<br />
+    タイトル3<br />
+    と表示できれば完成です。
     </span>
   </div>
 
