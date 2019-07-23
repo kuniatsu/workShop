@@ -22,7 +22,8 @@ $ brew install git
 $ git --version
 ```
 をコマンド
-
+`git version 0.00.0`
+というようにバー
 
 
 
@@ -195,43 +196,43 @@ $ git checkout `新branch名`
 
 **同じ名前のファイルを作って衝突させる** 
 ```
-vi 同じ名前のファイルを作成
-git checkout `branch名`
+$ vi 同じ名前のファイルを作成
+$ git checkout `branch名`
 ```
 ↑エラーが発生する
 
 
 **新branchを作り衝突回避** 
 ```
-git add `ファイル名`
-git commit
-git checkout `branch名`
+$ git add `ファイル名`
+$ git commit
+$ git checkout `branch名`
 ```
 ↑エラーは起きなくなる。
 
 **強制的にチェックアウトする** 
 もう一度エラーが起こる状態を作る
 ```
-git checkout `branch(A)` 
-vi ファイル作成
-git add `ファイル名`
-git commit
-git push
+$ git checkout `branch(A)` 
+$ vi ファイル作成
+$ git add `ファイル名`
+$ git commit
+$ git push
 ```
 
 同名のファイルを作り衝突を確認
 ```
-git checkout `branch(B)` 
-vi 同名のファイル作成
-vi 別名のファイル作成
-git checkout `branch(A)` 
+$ git checkout `branch(B)` 
+$ vi 同名のファイル作成
+$ vi 別名のファイル作成
+$ git checkout `branch(A)` 
 ```
 ↑エラーが発生する
 
 
 同名のファイルを作り衝突を確認
 ```
-git checkout -f `branch(A)` 
+$ git checkout -f `branch(A)` 
 ```
 ↑上書きされる。
 
@@ -243,7 +244,7 @@ git checkout -f `branch(A)`
 
 **同じ名前のファイルを作って衝突させる** 
 ```
-git checkout master
+$ git checkout master
 ```
 國島が変更を行うので確認する  
 ・ファイル名  
@@ -252,26 +253,45 @@ git checkout master
 
 同じ場所に別の修正を入れて衝突させるpush拒否される
 ```
-vi ファイル名
-git add `ファイル名`
-git commit 
-git push
+$ vi ファイル名
+$ git add `ファイル名`
+$ git commit 
+$ git push
 ```
 
 コンフリクトを起こす
 ```
-git pull
+$ git pull
 ```
 ↑コンフリクトが発生する  
 
 
 コンフリクトを解決する  
 ```
-vi ファイル名
-git push
+$ vi ファイル名
+$ git push
 ```
 
 ---
 
-## *Lesson11 プルリクを送る*  
+## *Lesson11 mergeをする*  
+
+branchをmergeする
+```
+$ git checkout `branch(A)`
+$ git merge `branch(B)`
+$ ls -l
+```
+
+
+---
+
+## *Lesson12 プルリクを送る*  
+
+![Lesson12_1](Lesson12_1.png)
+「New pull request」を押します。    
+
+![Lesson12_2](Lesson12_2.png)
+どのブランチをどのブランチにマージするかを選択   
+「Create pull request」を押下で作成完了です。   
 
