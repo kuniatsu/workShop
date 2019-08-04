@@ -552,14 +552,16 @@
 
   <div class="obj">
     【時間があればチャレンジ上級】再帰読み出し<br />
-    0~4を表示するsaiki関数をwhileやforを使わずに完成させてください
+    0~変数kaisuuまでの数字を表示するsaiki関数をwhileやforを使わずに完成させてください
+    
     <p class="challenge" id="qb14_" onClick="dispQ('#qb14_','#q14_');">問題を表示</p>
     <span class="blind" id="q14_">
     <pre class="prettyprint" id="src14_">
       var i = 0;
+      var kaisuu = 5;
       saiki(i);
       function saiki(i){
-        if(i < 5){
+        if(i < kaisuu){
           console.dir(i);
           [処理]
           [処理]
