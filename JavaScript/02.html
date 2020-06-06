@@ -1,6 +1,6 @@
 <html>
 <head>
-  <title>js講座テキスト 19/08/04</title>
+  <title>js講座テキスト 20/06/06</title>
   <style>
     body{
         margin-left:20%;
@@ -139,7 +139,7 @@
 
 
 
-  <h2>画面に出力しよう</h2>
+  <h2>画面の情報を取得しよう</h2>
   <div class="obj">
       画面情報を取得する。<br />
       ※main.jsを変更<br />      
@@ -187,8 +187,8 @@
     &lt;html&gt; 
       &lt;body&gt;
         &lt;h1  id="title1"&gt;タイトル1&lt;/h1&gt;
-        &lt;h2 class="title2"&gt;タイトル2&lt;/h2&gt;
-        &lt;h2 id="title3" &gt;タイトル3&lt;/h2&gt;
+        &lt;h2 id="title2" &gt;タイトル2&lt;/h2&gt;
+        &lt;h2 class="title3"&gt;タイトル3&lt;/h2&gt;
         &lt;h2 class="title4" &gt;タイトル3&lt;/h2&gt;
         &lt;h3 &gt;タイトル5&lt;/h3&gt;
         &lt;h4 &gt;タイトル6&lt;/h4&gt;
@@ -198,13 +198,14 @@
         var title1 = document.getElementById('title1'); 
         console.dir([処理]);//タイトル1をconsoleに表示させる
 
-        //getElementsByClassNameでclassを指定して取得
-        var title2 = document.getElementsByClassName('title2'); 
-        console.dir(title2[0].innerText);
-
         //getElementsByIdでidを指定して取得
         [処理]
-        console.dir(title3);//タイトル3をconsoleに表示させる
+        console.dir(title2);//タイトル2をconsoleに表示させる
+
+
+        //getElementsByClassNameでclassを指定して取得
+        var title3 = document.getElementsByClassName('title3'); 
+        console.dir(title3[0].innerText);
 
         ///*チャレンジ問題！getElementsByClassでclassを指定して取得*/
         //[処理]
@@ -247,7 +248,7 @@
   </div>
 
 
-
+  <h2>画面の情報を変更しよう</h2>
   <div class="obj">
     画面の情報を変更する<br />      
     <pre class="prettyprint" id="src17">
